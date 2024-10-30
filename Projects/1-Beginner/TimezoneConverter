@@ -1,0 +1,32 @@
+# Timezone Converter
+
+**Tier**: 1-Beginner  
+
+The Timezone Converter app allows users to convert the current time in one timezone to another timezone. This app provides an intuitive way to calculate the time difference between locations worldwide, helping beginners understand basic JavaScript functions and handling of date and time values.
+
+## Purpose  
+The app's purpose is to let users quickly find the time in another timezone based on their current time.
+
+## Resources Needed  
+- Optional: [World Time API](http://worldtimeapi.org/) for fetching timezone data and daylight saving time adjustments.
+
+## User Stories  
+- User can select a source timezone (e.g., UTC, GMT, EST, PST).
+- User can select a target timezone to convert the time.
+- User can view the converted time displayed in the target timezone.
+- User can update the source time to see the conversion in real-time.
+- User can reset the selected timezones back to default values.
+
+## Bonus Features  
+- User can set a default source timezone (e.g., local timezone) that persists across sessions.
+- User can add multiple target timezones to view several conversions simultaneously.
+- User can view the current date along with the time for each timezone.
+
+## Useful Links and Resources  
+- [MDN Date](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) - Learn about JavaScript's Date object for handling date and time.
+- [World Time API](http://worldtimeapi.org/) - Provides accurate timezone data, including daylight saving adjustments.
+
+## Example Projects  
+- https://dateful.com/time-zone-converter(best one)
+- https://www.timeanddate.com/worldclock/converter.html
+- https://www.worldtimebuddy.com/
