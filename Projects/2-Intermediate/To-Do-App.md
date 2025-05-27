@@ -29,3 +29,30 @@ The classic To-Do application where a user can write down all the things he want
 -   [To Do List on Codepen](https://codepen.io/yesilfasulye/pen/eJIuF) by [Burak Kaya](https://codepen.io/yesilfasulye/)
 -   [Todo App in Plain JavaScript](https://safdarjamal.github.io/todo-app/)
 -   [Todo App in Golang](https://github.com/schadokar/go-to-do-app)
+
+
+## New Feature Suggestion: Persistent Storage
+Allow the user to save tasks in localStorage so that they don't disappear when the browser is closed.
+Improves the user experience by maintaining the list between sessions.
+
+## Useful Code Examples for the To-Do List 
+- improvement made here: added localStorage to save tasks
+
+function saveTasks(tasks) {
+  localStorage.setItem("todoList", JSON.stringify(tasks));
+}
+
+function loadTasks() {
+  const saved = localStorage.getItem("todoList");
+  return saved ? JSON.parse(saved) : [];
+}
+
+let tasks = loadTasks();
+
+- Example of adding a new task
+function addTask(description) {
+  const task = { description, done: false };
+  tasks.push(task);
+  saveTasks(tasks);
+  renderTasks(); // function to update the UI
+}
