@@ -1,4 +1,4 @@
-# Sales Reciepts
+# Sales Receipts
 
 **Tier:** 2-Intermediate
 
