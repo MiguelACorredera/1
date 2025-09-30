@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Card Memory Game</title>
+  <style>
+    :root{ --bg:#0f1724; --card:#0b1220; --accent:#7c3aed; --glass: rgba(255,255,255,0.04); }
+    *{box-sizing:border-box}
+    body{font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial; margin:0; min-height:100vh; display:flex; align-items:center; justify-content:center; background:linear-gradient(180deg,#071021 0%, #061225 60%); color:#e6eef8}
+    .app{width:100%; max-width:1100px; margin:28px;}
+    header{display:flex; gap:18px; align-items:center; justify-content:space-between}
+
+    .brand{display:flex; gap:14px; align-items:center}
+    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#0ea5a2);display:flex;align-items:center;justify-content:center;font-weight:700}
+    h1{font-size:20px;margin:0}
+    p.lead{margin:0;color:#9fb0c8}
+
+    .controls{display:flex;gap:12px;align-items:center}
+    select, button, input[type=number]{padding:8px 10px;border-radius:8px;border:0;background:var(--glass);color:inherit}
+    button.primary{background:var(--accent); color:white; border:0; padding:10px 14px; cursor:pointer}
+    .secondary{background:transparent;border:1px solid rgba(255,255,255,0.06)}
+
+    .meta{display:flex;gap:14px;align-items:center;margin-top:16px}
+    .meta .stat{background:rgba(255,255,255,0.03);padding:10px;border-radius:10px;min-width:120px;text-align:center}
+    .meta .stat small{display:block;color:#9fb0c8}
+
+    main{margin-top:18px; display:grid; grid-template-columns: 1fr 320px; gap:18px}
+
+    /* Board */
+    .board-wrap{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); padding:18px; border-radius:14px}
+    .board{display:grid; gap:12px; justify-content:center}
+
+    .card{width:100%; aspect-ratio:1/1; perspective:800px}
+    .card-inner{position:relative;width:100%;height:100%;transform-style:preserve-3d;transition: transform 350ms cubic-bezier(.2,.8,.2,1)}
+    .card.flipped .card-inner{transform: rotateY(180deg)}
+    .face{position:absolute;inset:0;border-radius:10px;display:flex;align-items:center;justify-content:center;backface-visibility:hidden;box-shadow:0 6px 18px rgba(2,6,23,0.6)}
+    .front{background:linear-gradient(180deg,#0b1220,#071020); color:#cfe9ff; font-size:28px}
+    .back{background:linear-gradient(180deg,#fff 0%, #fff 1%); transform:rotateY(180deg); color:#071020; font-size:34px}
+
+    .side-panel{background:rgba(255,255,255,0.02); padding:18px; border-radius:14px; height:100%}
+    .panel-section{margin-bottom:12px}
+    .level-buttons{display:flex;gap:8px}
+    .level-buttons button{flex:1}
+
+    .stats-list{display:grid;gap:8px}
+    .stats-item{background:rgba(255,255,255,0.02); padding:10px;border-radius:8px}
+
+    footer{margin-top:16px;color:#7f98b1;font-size:13px}
+
+    /* Responsive */
+    @media (max-width:900px){ main{grid-template-columns:1fr} .side-panel{order:2} }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <header>
+      <div class="brand">
+        <div class="logo">CM</div>
+        <div>
+          <h1>Card Memory Game</h1>
+          <p class="lead">Find matching pairs — timer, difficulty levels and stats saved locally.</p>
+        </div>
+      </div>
+
+      <div class="controls">
+        <label>
+          Difficulty
+          <select id="difficulty">
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+          </select>
+        </label>
+        <label>
+          Grid size
+          <input id="gridSize" type="number" min="2" max="8" value="4" />
+        </label>
+        <button id="startBtn" class="primary">Start Game</button>
+        <button id="resetStats" class="secondary" title="Clear stats">Reset Stats</button>
+      </div>
+    </header>
+
+    <div class="meta">
+      <div class="stat"><small>Elapsed</small><div id="elapsed">00:00</div></div>
+      <div class="stat"><small>Time left</small><div id="timeLeft">—</div></div>
+      <div class="stat"><small>Moves</small><div id="moves">0</div></div>
+    </div>
+
+    <main>
+      <section class="board-wrap">
+        <div id="board" class="board"></div>
+      </section>
+
+      <aside class="side-panel">
+        <div class="panel-section">
+          <h3>Controls</h3>
+          <div style="margin-top:8px;display:flex;gap:8px">
+            <button id="shuffleBtn" class="secondary">Shuffle</button>
+            <button id="cheatBtn" class="secondary">Show / Hide</button>
+          </div>
+        </div>
+
+        <div class="panel-section">
+          <h4>Difficulty presets</h4>
+          <div class="level-buttons">
+            <button data-level="easy">Easy</button>
+            <button data-level="medium">Medium</button>
+            <button data-level="hard">Hard</button>
+          </div>
+        </div>
+
+        <div class="panel-section">
+          <h4>Stats</h4>
+          <div class="stats-list" id="statsList">
+            <!-- stat rows injected here -->
+          </div>
+        </div>
+
+        <div class="panel-section">
+          <h4>How to play</h4>
+          <p style="font-size:13px;color:#9fb0c8">Click Start → flip two cards. If they match they stay revealed. Finish before time runs out (hard mode).</p>
+        </div>
+      </aside>
+    </main>
+
+    <footer>Built with HTML, CSS and vanilla JavaScript • Emoji icons used as card faces (no external images)</footer>
+  </div>
+
+  <!-- Congrats modal (simple) -->
+  <dialog id="congrats">
+    <h3>Congratulations 🎉</h3>
+    <p>You finished the game in <strong id="finalTime"></strong> with <span id="finalMoves"></span> moves.</p>
+    <menu>
+      <button id="playAgain">Play Again</button>
+      <button id="closeModal">Close</button>
+    </menu>
+  </dialog>
+
+  <script>
+    // ======= Config & state ======
+    const EMOJIS = ['🍎','🍌','🍇','🍓','🍒','🍍','🥝','🥑','🍑','🍋','🍉','🍊','🍐','🥥','🍈','🍏','🥕','🌽','🥔','🍆','🌶️','🍄','🥦','🥐'];
+
+    const difficultyPresets = {
+      easy: { grid: 4, timeLimit: 120 },
+      medium: { grid: 6, timeLimit: 90 },
+      hard: { grid: 8, timeLimit: 60 }
+    };
+
+    let state = {
+      gridSize: 4,
+      cards: [],
+      first: null,
+      second: null,
+      moves: 0,
+      matchesFound: 0,
+      started: false,
+      elapsed: 0,
+      timeLeft: null,
+      timerInterval: null,
+      countdownInterval: null,
+      difficulty: 'easy'
+    };
+
+    // ======= DOM ======
+    const boardEl = document.getElementById('board');
+    const startBtn = document.getElementById('startBtn');
+    const difficultyEl = document.getElementById('difficulty');
+    const gridSizeEl = document.getElementById('gridSize');
+    const elapsedEl = document.getElementById('elapsed');
+    const timeLeftEl = document.getElementById('timeLeft');
+    const movesEl = document.getElementById('moves');
+    const statsListEl = document.getElementById('statsList');
+    const congratsDialog = document.getElementById('congrats');
+    const finalTimeEl = document.getElementById('finalTime');
+    const finalMovesEl = document.getElementById('finalMoves');
+    const playAgainBtn = document.getElementById('playAgain');
+    const closeModalBtn = document.getElementById('closeModal');
+    const shuffleBtn = document.getElementById('shuffleBtn');
+    const cheatBtn = document.getElementById('cheatBtn');
+    const resetStatsBtn = document.getElementById('resetStats');
+
+    // ======= Local storage for stats ======
+    const STATS_KEY = 'cmgame_stats_v1';
+    function getStats(){
+      try{ return JSON.parse(localStorage.getItem(STATS_KEY)) || defaultStats(); }catch(e){ return defaultStats(); }
+    }
+    function defaultStats(){ return { easy:{wins:0,losses:0,bestTime:null}, medium:{wins:0,losses:0,bestTime:null}, hard:{wins:0,losses:0,bestTime:null} } }
+    function saveStats(s){ localStorage.setItem(STATS_KEY, JSON.stringify(s)); renderStats(); }
+
+    function renderStats(){
+      const s = getStats(); statsListEl.innerHTML='';
+      for(const level of ['easy','medium','hard']){
+        const it = document.createElement('div'); it.className='stats-item';
+        it.innerHTML = `<strong>${level.toUpperCase()}</strong>
+          <div style="font-size:13px;color:#9fb0c8;margin-top:6px">Wins: ${s[level].wins} • Losses: ${s[level].losses}<br>Best: ${s[level].bestTime ? formatTime(s[level].bestTime) : '—'}</div>`;
+        statsListEl.appendChild(it);
+      }
+    }
+
+    // ======= Utilities ======
+    function shuffle(array){
+      for(let i=array.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [array[i],array[j]]=[array[j],array[i]] }
+      return array;
+    }
+    function formatTime(seconds){ const m=Math.floor(seconds/60); const s=seconds%60; return `${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}` }
+
+    // ======= Game setup ======
+    function buildDeck(gridSize){
+      const total = gridSize*gridSize;
+      if(total % 2 !== 0) throw new Error('Grid must have even number of cells');
+      const pairCount = total/2;
+      const pool = shuffle(EMOJIS.slice());
+      const selected = pool.slice(0,pairCount);
+      const deck = shuffle([...selected, ...selected]);
+      return deck.map((face, idx)=>({id:idx, face, matched:false, revealed:false}));
+    }
+
+    function renderBoard(){
+      const g = state.gridSize;
+      boardEl.style.gridTemplateColumns = `repeat(${g}, minmax(60px, 1fr))`;
+      boardEl.innerHTML='';
+      state.cards.forEach(card=>{
+        const c = document.createElement('div'); c.className='card' + (card.revealed || card.matched ? ' flipped': ''); c.dataset.id = card.id;
+        c.innerHTML = `
+          <div class="card-inner">
+            <div class="face front">?</div>
+            <div class="face back">${card.face}</div>
+          </div>
+        `;
+        c.addEventListener('click', ()=> onCardClick(card.id));
+        boardEl.appendChild(c);
+      });
+    }
+
+    // ======= Game logic ======
+    function onCardClick(id){
+      if(!state.started) return; // ignore if not started
+      const card = state.cards.find(c=>c.id==id);
+      if(!card || card.revealed || card.matched) return;
+      // reveal
+      card.revealed = true; renderBoard();
+      if(!state.first){ state.first = card; return }
+      if(state.first && !state.second && card.id !== state.first.id){ state.second = card; state.moves++; movesEl.textContent = state.moves; checkForMatch(); }
+    }
+
+    function checkForMatch(){
+      if(!state.first || !state.second) return;
+      if(state.first.face === state.second.face){
+        // match
+        state.first.matched = true; state.second.matched = true; state.matchesFound +=2;
+        state.first = null; state.second = null;
+        renderBoard();
+        if(state.matchesFound === state.cards.length) winGame();
+      } else {
+        // no match -> flip back after short delay
+        const f1 = state.first.id, f2 = state.second.id;
+        setTimeout(()=>{
+          const a = state.cards.find(c=>c.id===f1);
+          const b = state.cards.find(c=>c.id===f2);
+          if(a) a.revealed=false; if(b) b.revealed=false; state.first=null; state.second=null; renderBoard();
+        }, 700);
+      }
+    }
+
+    // ======= Timers ======
+    function startTimers(){
+      // elapsed
+      clearInterval(state.timerInterval); state.elapsed = 0; elapsedEl.textContent = '00:00';
+      state.timerInterval = setInterval(()=>{ state.elapsed++; elapsedEl.textContent = formatTime(state.elapsed); }, 1000);
+      // countdown
+      if(state.timeLeft !== null){ clearInterval(state.countdownInterval); timeLeftEl.textContent = formatTime(state.timeLeft);
+        state.countdownInterval = setInterval(()=>{
+          state.timeLeft--; timeLeftEl.textContent = formatTime(Math.max(0,state.timeLeft));
+          if(state.timeLeft <= 0){ clearInterval(state.countdownInterval); loseGame(); }
+        }, 1000);
+      } else { timeLeftEl.textContent = '—' }
+    }
+    function stopTimers(){ clearInterval(state.timerInterval); clearInterval(state.countdownInterval); }
+
+    // ======= Start / End ======
+    function startGame(){
+      // read inputs
+      const preset = difficultyEl.value;
+      const grid = parseInt(gridSizeEl.value,10) || difficultyPresets[preset].grid;
+      if((grid*grid) % 2 !== 0){ alert('Grid must contain an even number of cells. Choose an even size.'); return }
+      state.difficulty = preset;
+      state.gridSize = grid;
+      state.cards = buildDeck(grid);
+      state.first = state.second = null; state.moves=0; state.matchesFound=0; state.started=true; state.elapsed=0;
+
+      // time limit based on difficulty: if grid too small, allow more time
+      const baseLimit = difficultyPresets[preset]?.timeLimit ?? null;
+      state.timeLeft = baseLimit ? Math.max(10, Math.floor(baseLimit * (grid/ difficultyPresets[preset].grid))) : null;
+
+      movesEl.textContent = state.moves;
+      renderBoard(); startTimers();
+    }
+
+    function winGame(){ stopTimers(); state.started=false; finalTimeEl.textContent = formatTime(state.elapsed); finalMovesEl.textContent = state.moves; congratsDialog.showModal();
+      // save stats
+      const s = getStats(); s[state.difficulty].wins += 1; if(!s[state.difficulty].bestTime || state.elapsed < s[state.difficulty].bestTime) s[state.difficulty].bestTime = state.elapsed; saveStats(s);
+    }
+    function loseGame(){ stopTimers(); state.started=false; alert('Time is up — you lost.'); const s = getStats(); s[state.difficulty].losses += 1; saveStats(s); }
+
+    // ======= UI bindings ======
+    startBtn.addEventListener('click', ()=> startGame());
+
+    difficultyEl.addEventListener('change', e=>{
+      // change grid size default to preset if user hasn't modified
+      const val = e.target.value; const preset = difficultyPresets[val]; if(preset){ gridSizeEl.value = preset.grid; }
+    });
+
+    document.querySelectorAll('.level-buttons button').forEach(b=> b.addEventListener('click', ()=>{ difficultyEl.value = b.dataset.level; difficultyEl.dispatchEvent(new Event('change')); }));
+
+    playAgainBtn.addEventListener('click', ()=>{ congratsDialog.close(); startGame(); });
+    closeModalBtn.addEventListener('click', ()=> congratsDialog.close());
+
+    shuffleBtn.addEventListener('click', ()=>{ if(state.started) return; if(state.cards.length){ state.cards = shuffle(state.cards); renderBoard(); } });
+    cheatBtn.addEventListener('click', ()=>{
+      // toggle show all briefly
+      if(!state.cards.length) return;
+      const anyHidden = state.cards.some(c=>!c.revealed && !c.matched);
+      if(anyHidden){ state.cards.forEach(c=>{ if(!c.matched) c.revealed = true }); renderBoard(); setTimeout(()=>{ state.cards.forEach(c=>{ if(!c.matched) c.revealed=false }); renderBoard(); }, 900); }
+      else{ state.cards.forEach(c=>{ if(!c.matched) c.revealed=false }); renderBoard(); }
+    });
+
+    resetStatsBtn.addEventListener('click', ()=>{ if(confirm('Clear saved stats?')){ localStorage.removeItem(STATS_KEY); renderStats(); } });
+
+    // persist grid size to input local memory (optional)
+
+    // init
+    (function init(){
+      renderStats(); // set default grid by difficulty
+      gridSizeEl.value = difficultyPresets[difficultyEl.value].grid;
+      // ensure initial empty board
+      state.gridSize = parseInt(gridSizeEl.value,10);
+      state.cards = buildDeck(state.gridSize);
+      state.cards.forEach(c=>c.revealed=false);
+      renderBoard();
+    })();
+
+    // small accessibility: allow closing dialog with escape
+    window.addEventListener('keydown', e=>{ if(e.key==='Escape' && congratsDialog.open) congratsDialog.close(); })
+
+  </script>
+</body>
+</html>
