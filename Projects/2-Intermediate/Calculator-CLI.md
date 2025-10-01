@@ -1,33 +1,32 @@
-# Calculator CLI
+# Calculator
 
 **Tier:** 2-Intermediate
 
-Create a basic calculator with addition feature. 
+A simple calculator app that supports basic arithmetic operations.
 
 ## User Stories
 
-- [ ] User can add multiple numbers using `add` command.
-- [ ] User can add floating numbers using the `-f` flag.
-- [ ] User can add only even/odd numbers using `even`/`odd` sub-command.
-- [ ] User can use `--help` or `-h` flag to get all the available commands and flags.
-  
-> Note: The stories 1 and 2 are basically for static typed language, where passed arguments must be of same type.
+- [ ] User can see a display showing the current input or result.
+- [ ] User can enter numbers using buttons `0-9`.
+- [ ] User can perform the four basic operations: addition, subtraction, multiplication, division.
+- [ ] User can use an `=` button to calculate and display the result.
+- [ ] User can use a `C` button to clear the last entry.
+- [ ] User can use an `AC` button to clear all input.
+- [ ] User cannot enter more than 8 digits (extra digits ignored).
+- [ ] If the result is longer than 8 digits, the display shows `ERR`.
 
 ## Bonus Features
 
-- [ ] User can use all the basic arithmetic operations like (addition, subtraction, multiplication and divison).
-- [ ] User can use `--help` or `-h` flag to get the sub-commands of command.
-- [ ] **Power of** and **Square Root of** operation.
+- [ ] Add support for decimals.
+- [ ] Add keyboard input support.
+- [ ] Add memory functions (M+, M-, MR, MC).
 
-## Useful links and resources
+## Useful Links and Resources
 
-- [5 keys to create a killer CLI in Go](https://blog.alexellis.io/5-keys-to-a-killer-go-cli/)
-- [How to build a CLI tool in NodeJS ?](https://www.freecodecamp.org/news/how-to-build-a-cli-tool-in-nodejs-bc4f67d898ec/)
-- [Build a Command Line Interface (CLI) Application with Node.js](https://codeburst.io/build-a-command-line-interface-cli-application-with-node-js-59becec90e28)
-- [Building Beautiful Command Line Interfaces with Python](https://codeburst.io/building-beautiful-command-line-interfaces-with-python-26c7e1bb54df)
-- [How to create a CLI in golang with cobra](https://schadokar.dev/posts/how-to-create-a-cli-in-golang-with-cobra/)
-- [Building a Network Command Line Interface in Go](https://tutorialedge.net/golang/building-a-cli-in-go/)
+- [JavaScript Calculator Tutorial](https://freshman.tech/calculator/)
+- [MDN Web Docs: eval()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval)
+- [CSS Grid Layout](https://css-tricks.com/snippets/css/complete-guide-grid/)
 
-## Example projects
+## Example Project
 
--   [my-calc](https://github.com/schadokar/my-calc)
+- [Simple JavaScript Calculator](https://github.com/rishima17/calculator.git)
