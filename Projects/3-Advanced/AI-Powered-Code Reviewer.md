@@ -50,5 +50,5 @@ An automated code-reviewer that leverages modern LLMs (for example, OpenAI model
 
 ## Example projects
 
-- [octotree](https://github.com/ovity/octotree)
+- [CodiumAI/pr-agent](https://github.com/Codium-ai/pr-agent)
 
