@@ -31,4 +31,4 @@ To automate the process of remembering and sending birthday wishes, saving time 
 - [Environment Variables in Python](https://www.geeksforgeeks.org/how-to-use-environment-variables-in-python/)  
 
 ## Example Projects
-- [Birthday Reminder App – GitHub](https://github.com/nagapraneethk/birthday-reminder)
+- [Birthday Reminder App – GitHub](https://github.com/nagapraneethk/Auto-Birthday-Wisher)
