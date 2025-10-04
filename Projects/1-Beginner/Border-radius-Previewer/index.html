@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Border Radius</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Border-radius Previewer</h1>
+
+        <div class="preview-box" id="previewBox"></div>
+
+        <div class="controls">
+            <div class="control_group">
+                <label>T-left: <input type="range" min="0" max="100" value="0" id="topLeft"></label>
+                <label>B-left: <input type="range" min="0" max="100" value="0" id="bottomLeft"></label>
+            </div>
+            <div class="control_group">
+                <label>T-right: <input type="range" min="0" max="100" value="0" id="topRight"></label>
+                <label>B-right: <input type="range" min="0" max="100" value="0" id="bottomRight"></label>
+            </div>
+        </div>
+
+        <div class="css-output">
+            <input type="text" id="cssCode" readonly>
+            <button id="copyBtn">Copy</button>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
