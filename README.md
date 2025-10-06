@@ -1,3 +1,5 @@
+<a name="top"></a>
+
 ## 👇 **Practice Daily on iCodeThis.com** 👇
 
 [![iCodeThis](https://www.icodethis.com/banner.jpg)](https://iCodeThis.com/?ref=app-ideas)
@@ -25,6 +27,10 @@ Each project has the following **features**:
 4. All the resources and links to help you find what you need to complete the project
 
 Here you can [watch a video about this repository](https://www.youtube.com/watch?v=TNzCfgwIDCY).
+
+[⬆️ Go to Top](#top)
+
+---
 
 ## Projects
 
@@ -79,6 +85,10 @@ required to complete them.
 | [Word Frequency](./Projects/1-Beginner/Word-Frequency-App.md)                     | Calculate word frequency in a block of text                | 1-Beginner |
 | [Weather App](./Projects/1-Beginner/Weather-App.md)                               | Get the temperature, weather condition of a city.          | 1-Beginner |
 
+[⬆️ Go to Top](#top)
+
+---
+
 ### Tier-2: Intermediate Projects
 
 | Name                                                                              | Short Description                                  | Tier           |
@@ -117,6 +127,10 @@ required to complete them.
 | [Typing Practice](./Projects/2-Intermediate/Typing-Practice-App.md)               | Typing Practice                                    | 2-Intermediate |
 | [Voting App](./Projects/2-Intermediate/Voting-App.md)                             | Voting App                                         | 2-Intermediate |
 
+[⬆️ Go to Top](#top)
+
+---
+
 ### Tier-3: Advanced Projects
 
 | Name                                                                          | Short Description                                                   | Tier       |
@@ -142,11 +156,19 @@ required to complete them.
 | [Spell-It App](./Projects/3-Advanced/SpellIt-App.md)                          | A twist on the classic Speak N Spell game                           | 3-Advanced |
 | [Survey App](./Projects/3-Advanced/Survey-App.md)                             | Define, conduct, and view a survey                                  | 3-Advanced |
 
+[⬆️ Go to Top](#top)
+
+---
+
 ## Plans for the future
 
 We are planning to add more and more projects to this repository. For this, we need your help! Find out how to contribute below. 👇
 
 We are also planning to create a website where you can easily browse through all of the projects.
+
+[⬆️ Go to Top](#top)
+
+---
 
 ## Contribution
 
@@ -159,11 +181,19 @@ Any contributions are highly appreciated. :pray: You can contribute in two ways:
 
 You can also add your own examples to the projects after you have completed them. I highly encourage you to do this as it will show others what amazing things were built! 👍
 
+[⬆️ Go to Top](#top)
+
+---
+
 ## Spread the word!
 
 If the information from this repo was useful to you in any way, make sure you give it a star 🌟, this way others can find it and benefit too! Together we can grow and make our community better! :smiley:
 
 Do you have any suggestions on how we could improve this project overall? Let us know! We'd love to hear your feedback!
+
+[⬆️ Go to Top](#top)
+
+---
 
 ### Main Contributors 🙂🙂
 
