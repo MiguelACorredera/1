@@ -74,7 +74,7 @@ required to complete them.
 | [Slider Design](./Projects/1-Beginner/Slider-Design.md)                           | Display images using a slider control                      | 1-Beginner |
 | [Stopwatch App](./Projects/1-Beginner/Stopwatch-App.md)                           | Count time spent on activities                             | 1-Beginner |
 | [TrueOrFalse](./Projects/1-Beginner/True-or-False-App.md)                         | Identify the result of a conditional comparison            | 1-Beginner |
-| [Vigenere Cipher](./Projects/1-Beginner/Vigenere-Cipher.md)                       | Encrypt text using the Vigenere Cypher                     | 1-Beginner |
+| [Vigenere Cipher](./Projects/1-Beginner/Vigenere-Cipher.md)                       | Encrypt text using the Vigenere Cipher                     | 1-Beginner |
 | [Wind Chill](./Projects/1-Beginner/Windchill-App.md)                              | Calculate the windchill factor from an actual temperature  | 1-Beginner |
 | [Word Frequency](./Projects/1-Beginner/Word-Frequency-App.md)                     | Calculate word frequency in a block of text                | 1-Beginner |
 | [Weather App](./Projects/1-Beginner/Weather-App.md)                               | Get the temperature, weather condition of a city.          | 1-Beginner |
@@ -88,7 +88,7 @@ required to complete them.
 | [Calculator CLI](./Projects/2-Intermediate/Calculator-CLI.md)                     | Create a basic calculator cli.                     | 2-Intermediate |
 | [Card Memory Game](./Projects/2-Intermediate/Card-Memory-Game.md)                 | Memorize and match hidden images                   | 2-Intermediate |
 | [Charity Finder App](./Projects/2-Intermediate/Charity-Finder-App.md)             | Find a Global Charity to donate to                 | 2-Intermediate |
-| [Chrome Theme Extension](./Projects/2-Intermediate/Chrome-Theme-Extension.md)     | Build your own chrome theme extention.             | 2-Intermediate |
+| [Chrome Theme Extension](./Projects/2-Intermediate/Chrome-Theme-Extension.md)     | Build your own chrome theme extension.             | 2-Intermediate |
 | [Currency Converter](./Projects/2-Intermediate/Currency-Converter.md)             | Convert one currency to another.                   | 2-Intermediate |
 | [Drawing App](./Projects/2-Intermediate/Drawing-App.md)                           | Create digital artwork on the web                  | 2-Intermediate |
 | [Emoji Translator App](./Projects/2-Intermediate/Emoji-Translator-App.md)         | Translate sentences into Emoji                     | 2-Intermediate |
@@ -133,7 +133,7 @@ required to complete them.
 | [Instagram Clone](./Projects/3-Advanced/Instagram-Clone-App.md)               | A clone of Facebook's Instagram app                                 | 3-Advanced |
 | [GitHub Timeline](./Projects/3-Advanced/GitHub-Timeline-App.md)               | Generate a timeline of a users GitHub Repos                         | 3-Advanced |
 | [Kudos Slackbot](./Projects/3-Advanced/Kudos-Slackbot.md)                     | Give recognition to a deserving peer                                | 3-Advanced |
-| [Movie App](./Projects/3-Advanced/Movie-App.md)                               | Browse, Find Ratings, Check Actors and Find you next movie to watch | 3-Advanced |
+| [Movie App](./Projects/3-Advanced/Movie-App.md)                               | Browse, Find Ratings, Check Actors and Find your next movie to watch | 3-Advanced |
 | [MyPodcast Library](./Projects/3-Advanced/MyPodcast-Library-app.md)           | Create a library of favorite podcasts                               | 3-Advanced |
 | [NASA Exoplanet Query](./Projects/3-Advanced/NASA-Exoplanet-Query.md)         | Query NASA's Exoplanet Archive                                      | 3-Advanced |
 | [Shell Game](./Projects/3-Advanced/Shell-Game.md)                             | Animated shell game                                                 | 3-Advanced |
