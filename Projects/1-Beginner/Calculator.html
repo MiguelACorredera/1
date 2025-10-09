@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        .calculator {
+            background-color: #333;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            width: 300px;
+        }
+        .display {
+            background-color: #fff;
+            padding: 10px;
+            margin-bottom: 10px;
+            text-align: right;
+            font-size: 2em;
+            border-radius: 5px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 5px;
+        }
+        button {
+            padding: 20px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #666;
+            color: white;
+        }
+        button:hover {
+            background-color: #888;
+        }
+        .operator {
+            background-color: #ff9500;
+        }
+        .operator:hover {
+            background-color: #ffaa33;
+        }
+        .clear {
+            background-color: #ff3b30;
+        }
+        .clear:hover {
+            background-color: #ff5c52;
+        }
+        .equals {
+            background-color: #00cc00;
+        }
+        .equals:hover {
+            background-color: #33ff33;
+        }
+        .toggle-sign {
+            background-color: #666;
+        }
+        .toggle-sign:hover {
+            background-color: #888;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <div class="display" id="display">0</div>
+        <div class="buttons">
+            <button class="clear" onclick="clearAll()">AC</button>
+            <button class="clear" onclick="clearEntry()">C</button>
+            <button class="operator" onclick="appendOperator('%')">%</button>
+            <button class="operator" onclick="appendOperator('÷')">÷</button>
+            <button onclick="appendDigit('7')">7</button>
+            <button onclick="appendDigit('8')">8</button>
+            <button onclick="appendDigit('9')">9</button>
+            <button class="operator" onclick="appendOperator('×')">×</button>
+            <button onclick="appendDigit('4')">4</button>
+            <button onclick="appendDigit('5')">5</button>
+            <button onclick="appendDigit('6')">6</button>
+            <button class="operator" onclick="appendOperator('-')">-</button>
+            <button onclick="appendDigit('1')">1</button>
+            <button onclick="appendDigit('2')">2</button>
+            <button onclick="appendDigit('3')">3</button>
+            <button class="operator" onclick="appendOperator('+')">+</button>
+            <button onclick="appendDigit('0')">0</button>
+            <button onclick="appendDigit('.')">.</button>
+            <button class="toggle-sign" onclick="toggleSign()">+/-</button>
+            <button class="equals" onclick="calculate()">=</button>
+        </div>
+    </div>
+
+    <script>
+        let currentInput = '0';
+        let previousInput = '';
+        let operator = '';
+        let expression = '';
+        let history = [];
+
+        // Load saved result from localStorage
+        window.onload = function() {
+            const savedResult = localStorage.getItem('calculatorResult');
+            if (savedResult) {
+                currentInput = savedResult;
+                expression = savedResult;
+                updateDisplay();
+            }
+        };
+
+        function updateDisplay() {
+            document.getElementById('display').textContent = expression || currentInput || '0';
+        }
+
+        function appendDigit(digit) {
+            if (currentInput === 'ERR') {
+                clearAll();
+            }
+            if (currentInput.length >= 8 && !currentInput.includes('.')) return;
+            if (currentInput === '0' && digit !== '.') {
+                currentInput = digit;
+            } else {
+                currentInput += digit;
+            }
+            expression = operator ? `${previousInput}${operator}${currentInput}` : currentInput;
+            history.push(digit);
+            updateDisplay();
+        }
+
+        function appendOperator(op) {
+            if (currentInput === 'ERR') return;
+            if (currentInput !== '') {
+                if (op === '%') {
+                    if (previousInput && operator) {
+                        let num1 = parseFloat(previousInput);
+                        let num2 = parseFloat(currentInput);
+                        let percent = (num2 / 100) * num1;
+                        currentInput = percent.toString().slice(0, 8);
+                        expression = `${previousInput}${operator}${currentInput}`;
+                        history.push(op);
+                        updateDisplay();
+                    }
+                    return;
+                }
+                previousInput = currentInput;
+                currentInput = '';
+                operator = op;
+                expression = `${previousInput}${operator}`;
+                history.push(op);
+            }
+            updateDisplay();
+        }
+
+        function toggleSign() {
+            if (currentInput === 'ERR' || currentInput === '0') return;
+            if (currentInput.startsWith('-')) {
+                currentInput = currentInput.slice(1);
+            } else {
+                currentInput = '-' + currentInput;
+            }
+            expression = operator ? `${previousInput}${operator}${currentInput}` : currentInput;
+            history.push('+/-');
+            updateDisplay();
+        }
+
+        function clearAll() {
+            currentInput = '0';
+            previousInput = '';
+            operator = '';
+            expression = '';
+            history = [];
+            localStorage.removeItem('calculatorResult');
+            updateDisplay();
+        }
+
+        function clearEntry() {
+            if (history.length > 0) {
+                history.pop();
+                if (history.length === 0) {
+                    clearAll();
+                    return;
+                }
+                operator = '';
+                previousInput = '';
+                currentInput = '';
+                let buffer = '';
+                for (let item of history) {
+                    if (item === '+/-') {
+                        buffer = buffer
+                            ? (buffer.startsWith('-') ? buffer.slice(1) : '-' + buffer)
+                            : '-';
+                    } else if (/[0-9.]/.test(item)) {
+                        buffer += item;
+                    } else {
+                        previousInput = buffer;
+                        operator = item;
+                        buffer = '';
+                    }
+                }
+                currentInput = buffer;
+                expression = operator ? `${previousInput}${operator}${currentInput}` : currentInput || '0';
+            } else {
+                clearAll();
+            }
+            updateDisplay();
+        }
+
+        function calculate() {
+            if (currentInput === 'ERR' || !previousInput || !operator) return;
+
+            let num1 = parseFloat(previousInput);
+            let num2 = parseFloat(currentInput);
+            let result;
+
+            switch (operator) {
+                case '+':
+                    result = num1 + num2;
+                    break;
+                case '-':
+                    result = num1 - num2;
+                    break;
+                case '×':
+                    result = num1 * num2;
+                    break;
+                case '÷':
+                    if (num2 === 0) {
+                        currentInput = 'ERR';
+                        expression = 'ERR';
+                        updateDisplay();
+                        return;
+                    }
+                    result = num1 / num2;
+                    break;
+            }
+
+            if (Math.abs(result) > 99999999 || !isFinite(result)) {
+                currentInput = 'ERR';
+                expression = 'ERR';
+            } else {
+                currentInput = result.toString().slice(0, 8);
+                expression = currentInput;
+                localStorage.setItem('calculatorResult', currentInput);
+            }
+            previousInput = '';
+            operator = '';
+            history = [currentInput];
+            updateDisplay();
+        }
+    </script>
+</body>
+</html>
