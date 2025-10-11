@@ -1,6 +1,6 @@
 # Breathing Pacer App 🧘
 
-**Tier:** 2-Intermediate
+**Tier:** 1-Beginner
 
 In our fast-paced world, mindfulness and relaxation have become essential for mental well-being.  
 The **Breathing Pacer App** provides a simple, web-based tool to help users focus on breathing exercises.  
