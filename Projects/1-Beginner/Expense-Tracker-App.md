@@ -1,5 +1,12 @@
 # Expense Tracker App
 
+## Objective
+Build a simple application to track daily expenses and manage personal finances.
+
+
+
+# Expense Tracker App
+
 A simple web application to track daily expenses and manage personal finances.
 
 ## User Stories
