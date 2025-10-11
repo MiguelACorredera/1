@@ -176,3 +176,13 @@ As a bonus, I created the [#100Days100Projects challenge](https://www.florin-pop
 ## Stars history
 
 [![Stargazers over time](https://starchart.cc/florinpop17/app-ideas.svg)](https://starchart.cc/florinpop17/app-ideas)
+
+## 🌍 Translations & Resources
+
+### Hindi Programming Resources
+- [FreeCodeCamp Hindi Tutorials](https://www.freecodecamp.org/hindi/)
+- [CodeWithHarry - Hindi Programming Courses](https://www.codewithharry.com)
+- [GeekyShows - Hindi Web Development](https://www.geekyshows.com)
+
+### Contributing Translations
+We welcome translations in Hindi and other languages! Feel free to add more resources for your language.
