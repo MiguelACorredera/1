@@ -22,9 +22,13 @@ Thank you for spending your time to improve this project! ^\_^
 
    ```bash
    git clone https://github.com/<your-username>/<repo-name>.git
+   ```
 
-3. create a new branch
+3. Create a new branch
+
+    ```bash
     git checkout -b my-new-branch
+    ```
 
 4. Make your changes
 
@@ -33,5 +37,6 @@ Thank you for spending your time to improve this project! ^\_^
     - git add .
     - git commit -m "Added my contribution"
     - git push origin my-new-branch
+    ```
     
 6. Open a Pull Request ✅
