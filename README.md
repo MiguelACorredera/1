@@ -91,6 +91,7 @@ required to complete them.
 | [Currency Converter](./Projects/2-Intermediate/Currency-Converter.md)             | Convert one currency to another.                   | 2-Intermediate |
 | [Drawing App](./Projects/2-Intermediate/Drawing-App.md)                           | Create digital artwork on the web                  | 2-Intermediate |
 | [Emoji Translator App](./Projects/2-Intermediate/Emoji-Translator-App.md)         | Translate sentences into Emoji                     | 2-Intermediate |
+| [Face Attendance App](./Projects/2-Intermediate/Face-Attendance.md)               | Attendance tracking with face recognition          | 2-Intermediate |
 | [Flashcards App](./Projects/2-Intermediate/FlashCards-App.md)                     | Review and test your knowledge through Flash Cards | 2-Intermediate |
 | [Flip Art App](./Projects/2-Intermediate/Flip-Art-App.md)                         | Animate a set of images                            | 2-Intermediate |
 | [Game Suggestion App](./Projects/2-Intermediate/Game-Suggestion-App.md)           | Create polls to decide what games to play          | 2-Intermediate |
