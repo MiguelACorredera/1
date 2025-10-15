@@ -1,0 +1,41 @@
+# Chu kỳ Màu sắc
+
+**Mức độ:** 1-Người mới bắt đầu
+
+Việc sử dụng màu sắc đóng một vai trò quan trọng trong Giao diện Người dùng (UI) và
+Trải nghiệm Người dùng (UX) của một ứng dụng. ColorCycle tìm cách giúp các nhà phát triển web hiểu rõ hơn
+về màu RBG bằng cách thực hiện những thay đổi nhỏ cho một hộp màu theo thời gian.
+
+Ứng dụng này vẽ một chiếc hộp được tô bằng màu do người dùng chỉ định và thực hiện các thay đổi nhỏ
+theo thời gian cũng dựa trên đầu vào của người dùng. Nói cách khác, nó chạy qua các
+chu kỳ thay đổi so với màu được chỉ định ban đầu. Những thay đổi này cho phép người dùng
+trải nghiệm tác động thị giác của các thay đổi khác nhau đối với từng phần riêng lẻ của
+đặc tả màu RGB (ví dụ: mã màu `#000000`).
+
+## Các Yêu cầu của Người dùng (User Stories)
+
+-   [ ] Người dùng có thể chỉ định màu tô ban đầu dưới dạng mã màu CSS
+        tiêu chuẩn sáu ký tự thập lục phân trong ba thành phần riêng biệt, mỗi thành phần hai chữ số - đỏ,
+        xanh dương và xanh lá.
+-   [ ] Người dùng có thể chỉ định một giá trị gia tăng cho mỗi thành phần màu sẽ
+        được cộng vào thành phần đó sau mỗi 0,25 giây.
+-   [ ] Người dùng có thể thấy chiếc hộp chứa màu tô thay đổi sau mỗi 0,25 giây.
+-   [ ] Người dùng chỉ có thể thay đổi các thành phần màu và giá trị gia tăng của chúng khi
+        ứng dụng đang dừng.
+-   [ ] Người dùng có thể bắt đầu và dừng hoạt động tô màu bằng một nút có tên
+        thay đổi thành 'Start' khi dừng và 'Stop' khi bắt đầu.
+-   [ ] Người dùng sẽ nhận được cảnh báo nếu nhập bất cứ thứ gì khác ngoài các chữ số
+        thập lục phân cho các thành phần màu.
+
+## Các tính năng bổ sung (Bonus features)
+
+-   [ ] Người dùng có thể thay đổi khoảng thời gian giữa các lần thay đổi màu.
+-   [ ] Người dùng có thể chỉ định định dạng mã hóa màu được sử dụng từ RGB sang một định dạng khác như HSL.
+
+## Các liên kết và tài nguyên hữu ích
+
+[Mã màu CSS](https://qhmit.com/css/css_color_codes.cfm)
+
+## Các dự án mẫu
+
+[Nền đổi màu bằng CSS](https://codepen.io/SoumyajitChand/pen/wjKVed)

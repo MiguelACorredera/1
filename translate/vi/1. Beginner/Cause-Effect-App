@@ -1,0 +1,39 @@
+# Quan hệ Nguyên nhân-Kết quả
+**Mức độ:** 1-Người mới bắt đầu
+
+Các mẫu (Patterns) là một phần không thể thiếu trong kỹ thuật phần mềm và đại diện cho các thành phần có khả năng tái sử dụng trong logic chương trình. Tuy nhiên, các mẫu không chỉ được sử dụng cho logic chương trình, chúng còn tồn tại trong các lĩnh vực khác như DevOps, hỗ trợ người dùng và giao diện người dùng.
+
+Một mẫu giao diện người dùng phổ biến là tóm tắt dữ liệu trong một phần của trang, bao gồm một loại danh sách nào đó (như văn bản, hình ảnh hoặc biểu tượng) mô tả hoặc phân loại một tập hợp dữ liệu. Khi một mục trong danh sách được nhấp vào, dữ liệu chi tiết phía sau nó sẽ được hiển thị trong một khung liền kề trên trang.
+
+Ví dụ, trên một trang web bất động sản, việc nhấp vào một địa chỉ trong danh sách các tài sản đang bán sẽ hiển thị chi tiết về tài sản đó ở một phần khác của trang.
+
+Thử thách này yêu cầu nhà phát triển thực hiện nó phải tuân theo các ràng buộc sau:
+- Bạn chịu trách nhiệm tự tạo dữ liệu thử nghiệm của riêng mình. Sử dụng một đối tượng Javascript được mã hóa cứng để xác định dữ liệu thử nghiệm của bạn (xem bên dưới).
+- Chỉ sử dụng HTML/CSS/Javascript gốc trong phiên bản đầu tiên của ứng dụng này.
+- Bạn có thể sử dụng các gói hoặc thư viện khác khi triển khai các phiên bản tiếp theo.
+
+## Các Yêu cầu của Người dùng (User Stories)
+- [ ] Người dùng có thể thấy một danh sách tên người được sắp xếp theo chiều dọc trong một khung tóm tắt trên trang.
+- [ ] Người dùng có thể nhấp vào một tên trong danh sách để cập nhật một khung liền kề trên trang với họ tên đầy đủ, địa chỉ, số điện thoại và ngày sinh của cá nhân đó.
+- [ ] Người dùng có thể nhấp vào một tên khác trong danh sách để làm mới khung chi tiết với thông tin của cá nhân đó.
+
+## Các tính năng bổ sung (Bonus features)
+- [ ] Người dùng có thể thấy tên người trong khung tóm tắt được tô sáng khi con trỏ chuột di chuyển qua nó.
+- [ ] Người dùng có thể thấy tên người trong khung tóm tắt được tô sáng bằng hiệu ứng lựa chọn (màu sắc, kích thước, v.v.) khi nó được nhấp vào. Đây là một hiệu ứng khác với hiệu ứng di chuột.
+- [ ] Người dùng có thể thấy hiệu ứng lựa chọn được xóa khỏi một tên trong danh sách tóm tắt khi một tên mới được nhấp vào.
+
+## Các liên kết và tài nguyên hữu ích
+-   [DOM Events](https://developer.mozilla.org/en-US/docs/Web/API/Event)
+
+Hãy cân nhắc việc xác định dữ liệu thử nghiệm của bạn trong một đối tượng JavaScript có định dạng như sau:
+
+const people = [
+  {name: "...", street: "...", city: "...", state: "...", country: "...", telephone: "...", birthday: "..."},
+  .
+  .
+  .
+  {name: "...", street: "...", city: "...", state: "...", country: "...", telephone: "...", birthday: "..."}
+];
+
+## Các dự án mẫu
+Hãy xem sự tương tác giữa các mục Điều hướng (Navigation) ở phía bên trái của trang và phần thân chính của trang trên trang web [Javascript MDN site](https://developer.mozilla.org/en-US/docs/Web/JavaScript)

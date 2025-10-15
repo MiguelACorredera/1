@@ -1,0 +1,53 @@
+# Trạng thái GitHub
+
+**Mức độ:** 1-Người mới bắt đầu
+
+Các ứng dụng web thu thập dữ liệu theo nhiều cách. Thông qua đầu vào của người dùng trong các trang web, thông qua
+các API đến các hệ thống backend, từ các tệp và cơ sở dữ liệu, và đôi khi bằng cách "cào"
+các trang web. Mục tiêu của ứng dụng Trạng thái GitHub là giới thiệu cho bạn một
+cách để cào thông tin từ một trang web khác.
+
+Trạng thái GitHub sử dụng gói NPM Request để lấy trạng thái trang web GitHub hiện tại
+từ trang web [Trạng thái GitHub](https://www.githubstatus.com/). Gói
+Request cho phép các trang web được lấy về không phải dưới dạng một cửa sổ trình duyệt, mà
+là một tài liệu JSON có thể được truy cập dễ dàng bởi mã của bạn.
+
+Mặc dù đặc tả ứng dụng này chủ yếu dựa vào Javascript, hãy thoải mái
+phát triển nó bằng ngôn ngữ bạn chọn!
+
+## Các Yêu cầu của Người dùng (User Stories)
+
+-   [ ] Người dùng có thể thấy trạng thái hiện tại của các hoạt động Git của GitHub, Yêu cầu API,
+        Sự cố hoạt động, PR, Bảng điều khiển & Dự án, Thông báo hoạt động,
+        Gist hoạt động và Trang GitHub hoạt động dưới dạng danh sách trong cửa sổ ứng dụng
+        chính.
+-   [ ] Người dùng có thể lấy trạng thái gần đây nhất từ trang web Trạng thái GitHub
+        bằng cách nhấp vào nút 'Lấy trạng thái'.
+
+## Các tính năng bổ sung (Bonus features)
+
+-   [ ] Người dùng có thể thấy bất kỳ thành phần nào của GitHub không ở trạng thái 'Hoạt động'
+        được tô sáng bằng một màu khác, hoạt ảnh nền hoặc bất kỳ
+        kỹ thuật nào khác để làm cho nó nổi bật. Hãy sử dụng trí tưởng tượng của bạn!
+
+## Các liên kết và tài nguyên hữu ích
+
+-   [Cào web (Wikipedia)](https://en.wikipedia.org/wiki/Web_scraping)
+-   [NPM Request](https://www.npmjs.com/package/request)
+-   [JSON Javascript (MDN)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON)
+-   [Ký hiệu đối tượng JavaScript](https://json.org/)
+-   Gợi ý! Bạn có thể sử dụng mã sau để hiển thị JSON cho trang web
+        Trạng thái GitHub từ dòng lệnh `node ghstatus`. Bạn có thể sử dụng
+        đầu ra này để xác định phần tử JSON nào chứa thông tin trạng thái bạn sẽ
+        cần để phát triển ứng dụng này.
+ghstatus.js
+
+const request = require('request');
+request('https://www.githubstatus.com/',  { json: true }, (err, res, body) => {
+console.log(body);
+});
+
+## Các dự án mẫu
+
+-   [Ví dụ của Peter Luczynski](https://peterluczynski.github.io/github-status/)
+-   [Ví dụ của Diogo Moreira](https://diogomoreira.github.io/github-status/)

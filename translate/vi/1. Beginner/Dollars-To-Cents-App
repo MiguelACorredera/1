@@ -1,0 +1,29 @@
+# Từ Đô la sang Xu
+
+**Mức độ:** 1-Người mới bắt đầu
+
+Việc chuyển đổi đô la sang xu sẽ cho phép bạn thực hành kiến thức lập trình cơ bản của mình. Vòng lặp, điều kiện if và một thuật toán đơn giản sẽ được sử dụng.
+Nhiệm vụ của bạn là cho phép người dùng nhập một giá trị đô la (số thực), giả sử rằng nó cũng có thể chấp nhận thêm xu lẻ (ví dụ: $2,75), và chuyển đổi nó thành một số nguyên (trong trường hợp này, $2,75 = 275). Sau đó, chuyển đổi thành các đồng xu với các loại phụ của đô la: penny, nickel, dime và quarter. Sử dụng một thuật toán sẽ chia giá trị đô la cho bốn loại đồng xu, và đưa ra số lượng đồng xu ít nhất có thể.
+
+Thử thách: Hãy thử làm điều này mà không sử dụng bất kỳ framework nào.
+
+(VÍ DỤ: Nếu bạn có $0,58, tôi sẽ có 4 đồng xu: 2 quarters, 0 dimes, 1 nickel và 3 pennies)
+
+## Các Yêu cầu của Người dùng (User Stories)
+
+-   [ ] Người dùng có thể nhập một giá trị đô la.
+-   [ ] Người dùng có thể thấy tổng số xu từ giá trị đô la đã chuyển đổi.
+
+## Các tính năng bổ sung (Bonus features)
+
+-   [ ] Người dùng có thể thấy có bao nhiêu đồng penny, nickel, quarter và dime từ tổng số xu.
+
+## Các liên kết và tài nguyên hữu ích
+
+-   [Các hàm toán học](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math)
+-   [Vòng lặp và lặp lại](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration)
+-   [Giá trị tiền tệ trong JavaScript](https://timleland.com/money-in-javascript/)
+
+## Các dự án mẫu
+
+-   [Bộ chuyển đổi đô la sang xu](https://github.com/LimonJuice322/Dollars-to-cents-converter)

@@ -1,0 +1,47 @@
+# Máy tính
+
+**Mức độ:** 1-Người mới bắt đầu
+
+Máy tính không chỉ là một trong những công cụ hữu ích nhất hiện có, mà chúng còn là một cách tuyệt vời để hiểu về giao diện người dùng (UI) và xử lý sự kiện trong một ứng dụng. Trong bài toán này, bạn sẽ tạo ra một chiếc máy tính hỗ trợ các phép tính số học cơ bản trên số nguyên.
+
+Phong cách giao diện là tùy thuộc vào bạn, vì vậy hãy sử dụng trí tưởng tượng và sáng tạo! Bạn cũng có thể thấy việc thử nghiệm với ứng dụng máy tính trên thiết bị di động của mình là đáng giá để hiểu rõ hơn về các chức năng cơ bản và các trường hợp đặc biệt.
+
+## Các ràng buộc
+- Bạn không được sử dụng hàm eval() để thực hiện các phép tính.
+
+## Các Yêu cầu của Người dùng (User Stories)
+- [ ] Người dùng có thể thấy một màn hình hiển thị số hiện tại đã nhập hoặc kết quả của phép toán cuối cùng.
+
+- [ ] Người dùng có thể thấy một bàn phím nhập liệu chứa các nút cho các chữ số 0-9, các phép toán - '+', '-', '/', và '=', một nút 'C' (để xóa) và một nút 'AC' (để xóa tất cả).
+
+- [ ] Người dùng có thể nhập số dưới dạng chuỗi dài tối đa 8 chữ số bằng cách nhấp vào các chữ số trên bàn phím. Việc nhập bất kỳ chữ số nào nhiều hơn 8 sẽ bị bỏ qua.
+
+- [ ] Người dùng có thể nhấp vào một nút phép toán để hiển thị kết quả của phép toán đó trên:
+kết quả của phép toán trước đó và số cuối cùng đã nhập HOẶC
+hai số cuối cùng đã nhập HOẶC
+số cuối cùng đã nhập
+
+- [ ] Người dùng có thể nhấp vào nút 'C' để xóa số cuối cùng hoặc phép toán cuối cùng. Nếu lần nhập cuối cùng của người dùng là một phép toán, màn hình sẽ được cập nhật thành giá trị đứng trước nó.
+
+- [ ] Người dùng có thể nhấp vào nút 'AC' để xóa tất cả các khu vực làm việc nội bộ và đặt màn hình hiển thị về 0.
+
+- [ ] Người dùng có thể thấy 'ERR' được hiển thị nếu bất kỳ phép toán nào vượt quá giới hạn tối đa 8 chữ số.
+
+## Các tính năng bổ sung (Bonus features)
+- [ ] Người dùng có thể nhấp vào nút '+/-' để thay đổi dấu của số hiện đang được hiển thị.
+
+- [ ] Người dùng có thể thấy một nút dấu thập phân ('.') trên bàn phím cho phép nhập các số thực có tối đa 3 chữ số thập phân và thực hiện các phép toán với số chữ số thập phân tối đa đã nhập cho bất kỳ số nào.
+
+## Các liên kết và tài nguyên hữu ích
+- [Máy tính (Wikipedia)](https://en.wikipedia.org/wiki/Calculator)
+- [DN](https://developer.mozilla.org/en-US/)
+
+## Các dự án mẫu
+- [BHMBS - JS-Neumorphic-Calculator](https://en.wikipedia.org/wiki/Calculator)
+- [Javascript iOS Style Calculator](https://codepen.io/ssmkhrj/full/jOWBQqO)
+- [Javascript Calculator](https://codepen.io/giana/pen/GJMBEv)
+- [Javascript Calculator](https://codepen.io/giana/pen/GJMBEv)
+- [React Calculator](https://codepen.io/mjijackson/pen/xOzyGX)
+- [Javascript-CALC](https://github.com/x0uter/javascript-calc)
+- [Sample Calculator](https://sevlasnog.github.io/sample-calculator)
+- [Python Calculator](https://github.com/kana800/Side-Projects/tree/master/1-Beginner/calculator)

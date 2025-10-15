@@ -1,0 +1,49 @@
+# Biến CSS Động
+
+**Mức độ:** 1-Người mới bắt đầu
+
+Biến CSS là một công cụ mạnh mẽ cho phép nhà phát triển liên kết một tên
+tượng trưng với một giá trị, và sau đó sử dụng tên đó trong stylesheet ở bất cứ nơi nào
+cần giá trị đó. Lợi thế là khi cần thay đổi giá trị đó,
+nó chỉ cần thay đổi trong định nghĩa biến CSS thay vì ở
+nhiều nơi nó có thể được sử dụng.
+
+Điều có thể làm cho điều này trở nên mạnh mẽ hơn nữa là thay đổi động giá trị của một
+biến CSS tại thời điểm chạy.
+
+Mục tiêu của ứng dụng này là thay đổi động màu nền của các hộp văn bản
+để cho phép bạn có được kinh nghiệm sử dụng cả biến CSS và thay đổi
+chúng một cách linh hoạt từ bên trong ứng dụng.
+
+## Các Yêu cầu của Người dùng (User Stories)
+
+-   [ ] Người dùng có thể thấy ba hộp (hai hộp) để nhập User ID và Mật khẩu
+        cùng với các nút 'Hủy' và 'Đăng nhập' bên dưới chúng. Màu nền mặc định
+        của các hộp văn bản là màu trắng.
+-   [ ] Người dùng có thể nhập user id và mật khẩu vào các hộp văn bản.
+-   [ ] Người dùng có thể nhấp vào nút 'Đăng nhập' để xác thực user id và mật khẩu.
+-   [ ] Người dùng có thể thấy một thông báo cảnh báo nếu một hoặc cả hai hộp văn bản chứa
+        dấu cách và màu nền của hộp văn bản trống sẽ chuyển thành màu vàng
+        nhạt.
+-   [ ] Người dùng có thể thấy một thông báo cảnh báo nếu user id không khớp với 'testuser'
+        và màu nền của hộp văn bản sẽ chuyển thành màu đỏ nhạt.
+-   [ ] Người dùng có thể thấy một thông báo cảnh báo nếu mật khẩu không khớp với 'mypassword'
+        và màu nền của hộp văn bản sẽ chuyển thành màu đỏ nhạt.
+-   [ ] Người dùng có thể nhấp vào nút 'Hủy' để xóa các hộp văn bản và đặt lại
+        màu nền của chúng thành màu trắng.
+
+## Các tính năng bổ sung (Bonus features)
+
+-   [ ] Người dùng có thể thấy màu của đường viền hộp văn bản thay đổi khi phát hiện
+        lỗi.
+-   [ ] Người dùng có thể thấy kích thước và phông chữ của nội dung hộp văn bản thay đổi
+        khi phát hiện lỗi.
+
+## Các liên kết và tài nguyên hữu ích
+
+-   [Thuộc tính tùy chỉnh (--*): Biến CSS (MDN)](https://developer.mozilla.org/en-US/docs/Web/CSS/--*)
+-   [CSSStyleDeclaration (MDN)](https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleDeclaration)
+
+## Các dự án mẫu
+
+[Biến CSS Động](https://codepen.io/gordawn/pen/oOWBXX)

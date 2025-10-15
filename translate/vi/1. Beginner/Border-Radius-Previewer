@@ -1,0 +1,26 @@
+# Trình xem trước Border-radius
+**Mức độ:** 1-Người mới bắt đầu
+
+Thuộc tính border-radius có thể có nhiều giá trị được thay đổi. Xem trước hình dạng trông như thế nào khi thay đổi các giá trị này.
+
+## Các Yêu cầu của Người dùng (User Stories)
+- [ ] Người dùng có thể thấy một chiếc hộp được áp dụng thuộc tính border-radius.
+
+- [ ] Người dùng có thể thay đổi 4 giá trị border-radius được áp dụng cho hộp (trên-trái, trên-phải, dưới-trái, dưới-phải).
+
+- [ ] Người dùng có thể sao chép mã CSS kết quả vào clipboard.
+
+## Các tính năng bổ sung (Bonus features)
+- [ ] Người dùng có thể thay đổi tất cả 8 giá trị khả dĩ của border-radius để tạo ra một hình dạng phức tạp.
+
+## Các liên kết và tài nguyên hữu ích
+- [Viền trong CSS3](https://www.w3schools.com/css/css3_borders.asp)
+
+- [Sao chép vào Clipboard](https://www.w3schools.com/howto/howto_js_copy_clipboard.asp)
+
+##Các dự án mẫu
+- [9elements Fancy Border Radius](https://9elements.github.io/fancy-border-radius/)
+
+- [Border Radius](https://border-radius.com/)
+
+- [CSS Gradient Border](https://codepen.io/thebabydino/pen/zbqPVd)

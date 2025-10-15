@@ -1,0 +1,43 @@
+# Bin2Dec - Chuyển đổi Nhị phân sang Thập phân
+**Mức độ:** 1-Người mới bắt đầu
+
+Hệ nhị phân là hệ thống số mà tất cả các máy tính kỹ thuật số đều dựa trên đó.
+Do đó, việc các nhà phát triển hiểu về toán học nhị phân, hay cơ số 2, là rất quan trọng.
+Mục đích của Bin2Dec là cung cấp khả năng thực hành và hiểu biết về cách thực hiện các phép tính nhị phân.
+
+Bin2Dec cho phép người dùng nhập chuỗi lên đến 8 chữ số nhị phân, bao gồm các số 0
+và 1, theo bất kỳ trình tự nào và sau đó hiển thị giá trị thập phân tương đương của nó.
+
+Thử thách này yêu cầu nhà phát triển khi triển khai phải tuân thủ các
+ràng buộc sau:
+
+- Không được sử dụng mảng để chứa các chữ số nhị phân do người dùng nhập.
+
+- Việc xác định giá trị thập phân tương đương của một chữ số nhị phân cụ thể trong
+chuỗi phải được tính toán bằng cách sử dụng một hàm toán học duy nhất, ví
+dụ như logarit tự nhiên. Việc tìm ra hàm nào để sử dụng là tùy thuộc vào bạn.
+
+## Các Yêu cầu của Người dùng (User Stories)
+[ ] Người dùng có thể nhập tối đa 8 chữ số nhị phân vào một trường nhập liệu.
+
+[ ] Người dùng phải được thông báo nếu nhập bất cứ thứ gì khác ngoài số 0 hoặc 1.
+
+[ ] Người dùng xem kết quả trong một trường đầu ra duy nhất chứa giá trị thập phân (cơ số 10) tương đương với số nhị phân đã nhập.
+
+## Các tính năng bổ sung (Bonus features)
+[ ] Người dùng có thể nhập một số lượng chữ số nhị phân bất kỳ.
+
+## Các liên kết và tài nguyên hữu ích
+[Binary number system](https://en.wikipedia.org/wiki/Binary_number)
+
+## Các dự án mẫu
+Cố gắng đừng xem những dự án này cho đến khi bạn đã phát triển giải pháp của riêng mình:
+
+- [Chương trình chuyển đổi nhị phân sang thập phân cho người mới bắt đầu](https://www.youtube.com/watch?v=YMIALQE26KQ)
+- [Bộ chuyển đổi nhị phân sang thập phân sử dụng React](https://github.com/email2vimalraj/Bin2Dec)
+- [Bộ chuyển đổi nhị phân sang thập phân với HTML, JS và CSS thuần túy](https://grfreire.github.io/Bin2Dec/)
+- [Bộ chuyển đổi nhị phân sang thập phân sử dụng Flutter & Dart](https://github.com/israelss/AppIdeasCollection/tree/master/Tier1/Bin2Dec)
+- [Xem trước trực tiếp được xây dựng bằng Flutter cho Web] (https://bin2dec.web.app/#/)
+- [Bộ chuyển đổi nhị phân sang thập phân sử dụng React] (https://github.com/geoffctn/Bin2Dec)
+- [Bộ chuyển đổi nhị phân sang thập phân kiểu Matrix sử dụng Angular] (https://github.com/ZangiefWins/MatrixBin2Dec)
+- [Xem trước trực tiếp trên Heroku] (https://matrix-bin2dec.herokuapp.com/)

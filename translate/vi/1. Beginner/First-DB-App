@@ -1,0 +1,190 @@
+# Ứng dụng DB đầu tiên của bạn
+
+**Mức độ:** 1-Người mới bắt đầu
+
+Hiểu các khái niệm về cơ sở dữ liệu và cách sử dụng chúng trong các ứng dụng của bạn là
+kiến thức mà tất cả các nhà phát triển cần có. Mục tiêu của Ứng dụng DB đầu tiên của bạn
+là cung cấp một sự giới thiệu nhẹ nhàng về các khái niệm cơ sở dữ liệu và tìm hiểu một
+trường hợp sử dụng cho cơ sở dữ liệu trong một ứng dụng frontend.
+
+Vậy, bạn có biết rằng các trình duyệt hiện đại có một hệ thống quản lý cơ sở dữ liệu
+tích hợp sẵn không? IndexedDB được tích hợp vào hầu hết các trình duyệt hiện đại và cung cấp
+cho các nhà phát triển các tính năng cơ sở dữ liệu cơ bản, hỗ trợ giao dịch và
+lưu trữ bền vững phía máy khách qua các phiên làm việc.
+
+### Yêu cầu & Ràng buộc
+
+-   Trường hợp sử dụng chính cho một cơ sở dữ liệu dựa trên trình duyệt là để duy trì trạng thái hoặc
+    thông tin trạng thái cần tồn tại qua các phiên, hoặc như một khu vực làm việc
+    cho dữ liệu tạm thời. Ví dụ, dữ liệu được lấy từ một máy chủ phải được
+    định dạng lại hoặc làm sạch trước khi trình bày cho người dùng.
+
+-   Điều quan trọng cần ghi nhớ là vì môi trường trình duyệt
+    phía máy khách không thể được bảo mật, bạn không nên duy trì bất kỳ thông tin bí mật hoặc
+    thông tin nhận dạng cá nhân (PII) nào trong một cơ sở dữ liệu dựa trên trình duyệt.
+
+-   Lớp Javascript sau đây được cung cấp với chức năng cho phép
+    ứng dụng của bạn ban đầu điền và xóa cơ sở dữ liệu từ trình duyệt để bạn
+    có thể kiểm tra logic truy vấn bạn sẽ thêm. Bạn sẽ được yêu cầu kết nối
+    các nút trên trang web bạn xây dựng với các hàm `clearDB` và `loadDB`, và
+    viết trình xử lý `queryDB` của riêng bạn để kết nối với nút `Query DB`. Bạn cũng
+    sẽ cần thêm một hàm `queryAllRows` vào lớp Customer.
+```js
+class Customer {
+  constructor(dbName) {
+    this.dbName = dbName;
+    if (!window.indexedDB) {
+      window.alert("Trình duyệt của bạn không hỗ trợ phiên bản ổn định của IndexedDB. \
+        Tính năng này và tính năng khác sẽ không khả dụng.");
+    }
+  }
+
+  /**
+   * Xóa tất cả các hàng khỏi cơ sở dữ liệu
+   * @memberof Customer
+   */
+  removeAllRows = () => {
+    const request = indexedDB.open(this.dbName, 1);
+
+    request.onerror = (event) => {
+      console.log('removeAllRows - Lỗi cơ sở dữ liệu: ', event.target.error.code,
+        " - ", event.target.error.message);
+    };
+
+    request.onsuccess = (event) => {
+      console.log('Đang xóa tất cả khách hàng...');
+      const db = event.target.result;
+      const txn = db.transaction('customers', 'readwrite');
+      txn.onerror = (event) => {
+        console.log('removeAllRows - Lỗi giao dịch: ', event.target.error.code,
+          " - ", event.target.error.message);
+      };
+      txn.oncomplete = (event) => {
+        console.log('Đã xóa tất cả các hàng!');
+      };
+      const objectStore = txn.objectStore('customers');
+      const getAllKeysRequest = objectStore.getAllKeys();
+      getAllKeysRequest.onsuccess = (event) => {
+        getAllKeysRequest.result.forEach(key => {
+          objectStore.delete(key);
+        });
+      }
+    }
+  }
+
+  /**
+   * Điền vào cơ sở dữ liệu Customer với một bộ dữ liệu khách hàng ban đầu
+   * @param {[object]} customerData Dữ liệu để thêm
+   * @memberof Customer
+   */
+  initialLoad = (customerData) => {
+    const request = indexedDB.open(this.dbName, 1);
+
+    request.onerror = (event) => {
+      console.log('initialLoad - Lỗi cơ sở dữ liệu: ', event.target.error.code,
+        " - ", event.target.error.message);
+    };
+
+    request.onupgradeneeded = (event) => {
+      console.log('Đang điền dữ liệu khách hàng...');
+      const db = event.target.result;
+      const objectStore = db.createObjectStore('customers', { keyPath: 'userid' });
+      objectStore.onerror = (event) => {
+        console.log('initialLoad - lỗi objectStore: ', event.target.error.code,
+          " - ", event.target.error.message);
+      };
+
+      // Tạo một chỉ mục để tìm kiếm khách hàng theo tên và email
+      objectStore.createIndex('name', 'name', { unique: false });
+      objectStore.createIndex('email', 'email', { unique: true });
+
+      // Điền vào cơ sở dữ liệu với bộ hàng ban đầu
+      customerData.forEach(function(customer) {
+        objectStore.put(customer);
+      });
+      db.close();
+    };
+  }
+}
+
+// Trình xử lý sự kiện trang web
+const DBNAME = 'customer_db';
+
+/**
+ * Xóa tất cả dữ liệu khách hàng khỏi cơ sở dữ liệu
+ */
+const clearDB = () => {
+  console.log('Xóa tất cả các hàng khỏi cơ sở dữ liệu Customers');
+  let customer = new Customer(DBNAME);
+  customer.removeAllRows();
+}
+
+/**
+ * Thêm dữ liệu khách hàng vào cơ sở dữ liệu
+ */
+const loadDB = () => {
+  console.log('Tải cơ sở dữ liệu Customers');
+
+  // Khách hàng để thêm vào ban đầu để điền vào cơ sở dữ liệu
+  const customerData = [
+    { userid: '444', name: 'Bill', email: 'bill@company.com' },
+    { userid: '555', name: 'Donna', email: 'donna@home.org' }
+  ];
+  let customer = new Customer(DBNAME);
+  customer.initialLoad(customerData);
+}
+## Các Yêu cầu của Người dùng (User Stories)
+- [ ] Người dùng có thể thấy một trang web chứa bảng điều khiển có ba
+nút - 'Load DB', 'Query DB', và 'Clear DB'.
+- [ ] Người dùng có thể thấy một bảng thông báo nơi các thông báo trạng thái sẽ được đăng.
+- [ ] Người dùng có thể thấy một bảng log có thể cuộn nơi các chi tiết thực thi mô tả
+hoạt động của ứng dụng và giao diện với phiên bản Customer sẽ được đăng.
+- [ ] Người dùng có thể thấy một lịch sử chạy của các thông báo trong bảng thông báo trong bảng
+log.
+- [ ] Người dùng có thể thấy một khu vực kết quả truy vấn có thể cuộn nơi dữ liệu khách hàng
+được truy xuất sẽ được hiển thị.
+- [ ] Người dùng có thể nhấp vào nút 'Load DB' để điền dữ liệu vào cơ sở dữ liệu.
+Nút 'Load DB' trong giao diện người dùng của bạn phải được kết nối với trình xử lý sự kiện loadDB
+đã được cung cấp.
+- [ ] Người dùng có thể thấy một thông báo được hiển thị trong bảng thông báo khi
+thao tác tải dữ liệu bắt đầu và kết thúc.
+- [ ] Người dùng có thể nhấp vào nút 'Query DB' để liệt kê tất cả khách hàng trong khu vực
+kết quả truy vấn. Nút 'Query DB' trong giao diện người dùng của bạn phải được kết nối với một
+trình xử lý sự kiện queryDB bạn sẽ thêm vào chương trình.
+- [ ] Người dùng có thể thấy một thông báo trong bảng thông báo khi truy vấn bắt đầu
+và kết thúc.
+- [ ] Người dùng có thể thấy một thông báo trong khu vực kết quả truy vấn nếu không có hàng nào
+để hiển thị.
+- [ ] Người dùng có thể nhấp vào nút 'Clear DB' để xóa tất cả các hàng khỏi
+cơ sở dữ liệu. Nút 'Clear DB' trong giao diện người dùng của bạn phải được kết nối với
+trình xử lý sự kiện clearDB đã được cung cấp.
+- [ ] Người dùng có thể thấy một thông báo trong bảng thông báo khi thao tác
+xóa bắt đầu và kết thúc.
+
+## Các tính năng bổ sung (Bonus features)
+- [ ] Người dùng có thể thấy các nút được bật và tắt theo
+bảng sau.
+
+Trạng thái	Load DB	Query DB	Clear DB
+Hiển thị ban đầu của ứng dụng	bật	bật	tắt
+Nhấp vào Load DB	tắt	bật	bật
+Nhấp vào Query DB	tắt	bật	bật
+Nhấp vào Clear DB	bật	bật	tắt
+- [ ] Người dùng có thể thấy các trường dữ liệu Customer bổ sung được thêm vào những trường
+đã có trong mã được cung cấp. Nhà phát triển nên thêm ngày đặt hàng cuối cùng và tổng doanh số
+trong năm.
+- [ ] Nhà phát triển nên tiến hành một cuộc hồi tưởng về dự án này:
+    - Bạn có thể thấy những trường hợp sử dụng nào cho việc sử dụng IndexedDB trong các ứng dụng frontend của mình?
+    - Bạn có thể thấy những ưu và nhược điểm nào so với việc sử dụng một tệp hoặc
+lưu trữ cục bộ?
+    - Nói chung, bạn có thể sử dụng những tiêu chí nào để xác định xem IndexedDB có phù hợp
+với ứng dụng của bạn hay không. (Gợi ý: 100% có hoặc không không phải là một câu trả lời hợp lệ).
+
+## Các liên kết và tài nguyên hữu ích
+- [Các khái niệm về IndexedDB (MDN)](http://tinyw.in/7TIr)
+- [Sử dụng IndexedDB (MDN)](http://tinyw.in/w6k0)
+- [API IndexedDB (MDN)](http://tinyw.in/GqnF)
+- [Hỗ trợ trình duyệt cho IndexedDB](https://caniuse.com/#feat=indexeddb)
+
+## Các dự án mẫu
+Không có

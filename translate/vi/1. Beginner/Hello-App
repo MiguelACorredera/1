@@ -1,0 +1,67 @@
+# Hello
+
+**Mức độ:** 1-Người mới bắt đầu
+
+Việc các ứng dụng phải cung cấp cho người dùng chức năng
+cần thiết để hoàn thành một số nhiệm vụ hoặc mục tiêu là điều hiển nhiên. Hiệu quả của chức năng ứng dụng
+là yếu tố quyết định đầu tiên về cách người dùng cảm nhận các ứng dụng họ sử dụng. Tuy nhiên,
+đó không phải là điều duy nhất ảnh hưởng đến sự hài lòng của người dùng.
+
+Các tính năng Giao diện Người dùng và Trải nghiệm Người dùng (UI/UX) mà các nhà phát triển xây dựng vào
+ứng dụng có ít nhất một lượng ảnh hưởng tương đương đến nhận thức của người dùng về một ứng dụng.
+Có thể là một sự đơn giản hóa quá mức, nhưng UI/UX phần lớn (nhưng không hoàn toàn)
+liên quan đến "hình thức" của một ứng dụng. Cá nhân hóa là một khía cạnh của UX điều chỉnh
+các đặc điểm và hành động cho
+người dùng cá nhân. Việc cá nhân hóa chức năng ứng dụng theo cách này giúp
+làm cho ứng dụng dễ sử dụng và thú vị hơn.
+
+Mục tiêu của ứng dụng Hello là tận dụng vị trí địa lý để lấy
+quốc gia của người dùng để sau đó có thể tạo ra một lời chào tùy chỉnh bằng ngôn ngữ
+bản địa của người dùng.
+
+### Các ràng buộc
+
+-   Các nhà phát triển nên sử dụng dịch vụ [IP-API](http://ip-api.com/docs/api:json)
+    để lấy IP của người dùng.
+-   Các nhà phát triển nên sử dụng
+    dịch vụ [Fourtonfish](https://www.fourtonfish.com/hellosalut/hello/) để
+    lấy lời chào bằng ngôn ngữ bản địa của người dùng bằng cách chuyển IP của người dùng.
+-   Các nhà phát triển phải sử dụng giải mã thực thể HTML để giải mã thông điệp hello.
+
+## Các Yêu cầu của Người dùng (User Stories)
+
+-   [ ] Người dùng có thể thấy một bảng đăng nhập giả chứa một trường nhập văn bản tên người dùng,
+        một trường nhập văn bản mật khẩu và các nút 'Đăng nhập' và 'Đăng xuất'.
+-   [ ] Người dùng có thể nhập một tên đăng nhập giả vào trường Tên người dùng.
+-   [ ] Người dùng có thể nhập một mật khẩu giả vào trường Mật khẩu. Đầu vào phải
+        được che đi để người dùng thấy các dấu hoa thị (`*`) cho mỗi ký tự được nhập
+        thay vì mật khẩu văn bản thuần túy.
+-   [ ] Người dùng có thể nhấp vào nút 'Đăng nhập' để thực hiện một đăng nhập giả.
+-   [ ] Người dùng có thể thấy một thông báo nếu một hoặc cả hai trường nhập liệu trống
+        và màu đường viền của (các) trường bị lỗi phải được đổi thành màu đỏ.
+-   [ ] Người dùng có thể thấy một thông báo xác nhận đăng nhập theo định dạng:
+        `<lời chào bằng ngôn ngữ bản địa> <tên người dùng> bạn đã đăng nhập thành công!`
+-   [ ] Người dùng có thể nhấp vào nút 'Đăng xuất' để xóa các trường nhập văn bản và
+        bất kỳ thông báo nào trước đó.
+-   [ ] Người dùng có thể thấy một thông báo mới khi đăng xuất thành công theo định dạng:
+        `Chúc một ngày tốt lành <tên người dùng>!`
+
+## Các tính năng bổ sung (Bonus features)
+
+-   [ ] Người dùng có thể thấy một trường nhập văn bản bổ sung cho mã ngôn ngữ sẽ
+        được sử dụng để ghi đè IP thu được thông qua vị trí địa lý. Gợi ý:
+        đây là một tính năng tuyệt vời để kiểm tra ứng dụng của bạn.
+-   [ ] Người dùng có thể thấy thông tin vị trí địa lý bổ sung sau khi đăng nhập bao
+        gồm ít nhất địa chỉ IP cục bộ, thành phố, khu vực, tên quốc gia, mã zip,
+        kinh độ, vĩ độ và múi giờ.
+
+## Các liên kết và tài nguyên hữu ích
+
+-   [Hình thức đi đôi với chức năng (Wikipedia)](https://en.wikipedia.org/wiki/Form_follows_function)
+-   [Cá nhân hóa (Wikipedia)](https://en.wikipedia.org/wiki/Personalization)
+-   [Fourtonfish](https://www.fourtonfish.com/hellosalut/hello/)
+-   [IP-API](http://ip-api.com/docs/api:json)
+
+## Các dự án mẫu
+
+[Fourtonfish Hello World](https://fourtonfish.com/hellosalut/helloworld/)

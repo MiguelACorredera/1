@@ -1,0 +1,59 @@
+# CSV2JSON
+
+**Mức độ:** 1-Người mới bắt đầu
+
+Trong ứng dụng [JSON2CSV](./JSON2CSV-App.md), bạn đã dịch JSON
+sang định dạng giá trị được phân tách bằng dấu phẩy (CSV). Mục tiêu của CSV2JSON là
+đảo ngược quá trình đó bằng cách chuyển đổi một khối văn bản CSV thành JSON.
+
+Trong CSV2JSON, bạn sẽ bắt đầu bằng cách sao chép ứng dụng JSON2CSV bạn đã tạo và sau đó
+sửa đổi nó để cho phép chuyển đổi từ CSV sang JSON cũng như chuyển đổi từ JSON sang CSV
+đã có sẵn. Ngoài việc cung cấp một chức năng hữu ích, thử
+thách này cũng sẽ giúp bạn thực hành sửa đổi các ứng dụng hiện có để
+thêm chức năng mới.
+
+### Các ràng buộc ###
+
+-   Đọc kỹ các yêu cầu của người dùng dưới đây. Một số chức năng được tạo
+    cho JSON2CSV sẽ cần được sửa đổi.
+-   Bạn không được sử dụng bất kỳ thư viện hoặc gói nào được thiết kế để thực hiện loại
+    chuyển đổi này.
+-   Các cấu trúc JSON lồng nhau không được hỗ trợ.
+
+## Các Yêu cầu của Người dùng (User Stories)
+
+-   [ ] Người dùng có thể dán cú pháp CSV vào một hộp văn bản.
+-   [ ] Người dùng có thể nhấp vào nút 'Convert to JSON' để xác thực hộp văn bản CSV và chuyển đổi nó thành JSON.
+-   [ ] Người dùng có thể thấy một thông báo cảnh báo nếu hộp văn bản CSV trống hoặc nếu nó không chứa CSV hợp lệ.
+-   [ ] Người dùng có thể thấy CSV đã được chuyển đổi trong hộp văn bản JSON.
+
+### Các yêu cầu đã được triển khai trong JSON2CSV
+-   [ ] Người dùng có thể dán cú pháp JSON vào một hộp văn bản.
+-   [ ] Người dùng có thể nhấp vào nút 'Convert to CSV' để xác thực hộp văn bản JSON và chuyển đổi nó thành CSV.
+-   [ ] Người dùng có thể thấy một thông báo cảnh báo nếu hộp văn bản JSON trống hoặc nếu nó không chứa JSON hợp lệ.
+-   [ ] Người dùng có thể nhấp vào nút 'Clear' để xóa nội dung của cả hai hộp văn bản JSON và CSV.
+
+## Các tính năng bổ sung (Bonus features)
+
+-   [ ] Người dùng có thể nhập đường dẫn đến tệp CSV trên hệ thống tệp cục bộ vào một hộp văn bản.
+-   [ ] Người dùng có thể nhấp vào nút 'Open CSV' để tải tệp chứa CSV vào hộp văn bản.
+-   [ ] Người dùng có thể thấy thông báo cảnh báo nếu không tìm thấy tệp CSV.
+-   [ ] Người dùng có thể nhấp vào nút 'Save CSV' để lưu tệp CSV vào tệp đã nhập trong cùng một hộp văn bản được sử dụng để mở tệp CSV.
+-   [ ] Người dùng có thể thấy thông báo cảnh báo nếu hộp văn bản CSV trống hoặc nếu thao tác lưu không thành công.
+-   [ ] Người dùng có thể nhập đường dẫn đến tệp JSON trên hệ thống tệp cục bộ vào một hộp văn bản.
+-   [ ] Người dùng có thể nhấp vào nút 'Open JSON' để tải tệp chứa JSON vào hộp văn bản.
+-   [ ] Người dùng có thể thấy thông báo cảnh báo nếu không tìm thấy tệp JSON.
+-   [ ] Người dùng có thể nhấp vào nút 'Save JSON' để lưu tệp JSON vào tệp đã nhập trong cùng một hộp văn bản được sử dụng để mở tệp JSON.
+-   [ ] Người dùng có thể thấy thông báo cảnh báo nếu hộp văn bản JSON trống hoặc nếu thao tác lưu không thành công.
+
+## Các liên kết và tài nguyên hữu ích
+
+-   [Giá trị được phân tách bằng dấu phẩy (CSV)](https://en.wikipedia.org/wiki/Comma-separated_values)
+-   [Ký hiệu đối tượng JavaScript (JSON)](https://www.json.org/)
+-   [Lưu tệp bằng JS thuần túy](https://codepen.io/davidelrizzo/pen/cxsGb)
+-   [Đọc tệp trong Javascript](https://codepen.io/jduprey/details/xbale)
+
+## Các dự án mẫu
+
+-   [Bộ chuyển đổi CSV sang JSON](https://codepen.io/JFarrow/pen/CAwyo)
+-   [Bộ chuyển đổi JSV](https://gpaiva00.github.io/json-csv)

@@ -1,0 +1,38 @@
+### **`Flip-Image-App.md`**
+
+```markdown
+# Lật ảnh
+
+**Mức độ:** 1-Người mới bắt đầu
+
+Việc các nhà phát triển web hiểu những điều cơ bản về thao tác
+hình ảnh là rất quan trọng vì các ứng dụng web phong phú dựa vào hình ảnh để tăng thêm giá trị cho
+giao diện người dùng và trải nghiệm người dùng (UI/UX).
+
+FlipImage khám phá một khía cạnh của việc thao tác hình ảnh - xoay ảnh. Ứng dụng
+này hiển thị một khung vuông chứa một hình ảnh duy nhất được trình bày trong một
+ma trận 2x2. Sử dụng một bộ mũi tên lên, xuống, trái và phải liền kề với mỗi
+hình ảnh, người dùng có thể lật chúng theo chiều dọc hoặc chiều ngang.
+
+Bạn chỉ phải sử dụng HTML, CSS và Javascript gốc để triển khai ứng dụng này.
+Các gói và thư viện hình ảnh không được phép.
+
+## Các Yêu cầu của Người dùng (User Stories)
+
+-   [ ] Người dùng có thể thấy một khung chứa một hình ảnh duy nhất được lặp lại trong một ma trận 2x2.
+-   [ ] Người dùng có thể lật bất kỳ hình ảnh nào theo chiều dọc hoặc chiều ngang bằng cách sử dụng một bộ mũi tên lên, xuống, trái và phải bên cạnh hình ảnh.
+
+## Các tính năng bổ sung (Bonus features)
+
+-   [ ] Người dùng có thể thay đổi hình ảnh mặc định bằng cách nhập URL của một hình ảnh khác vào một trường nhập liệu.
+-   [ ] Người dùng có thể hiển thị hình ảnh mới bằng cách nhấp vào nút 'Hiển thị' bên cạnh trường nhập liệu.
+-   [ ] Người dùng có thể thấy thông báo lỗi nếu không tìm thấy URL của hình ảnh mới.
+
+## Các liên kết và tài nguyên hữu ích
+
+-   [Cách lật một hình ảnh](https://www.w3schools.com/howto/howto_css_flip_image.asp)
+-   [Tạo một hoạt ảnh lật bằng CSS](https://davidwalsh.name/css-flip)
+
+## Các dự án mẫu
+
+[Hiệu ứng hình ảnh của @bennettfeely](https://codepen.io/seyedi/pen/gvqYQv)

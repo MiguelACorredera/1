@@ -1,0 +1,62 @@
+# Đồng hồ Đếm ngược
+
+**Mức độ:** 1-Người mới bắt đầu
+
+Tất cả chúng ta đều có những sự kiện quan trọng mà mình mong đợi trong đời, sinh nhật,
+kỷ niệm và các ngày lễ là một vài ví dụ. Sẽ thật tuyệt nếu có một ứng dụng
+đếm ngược số tháng, ngày, giờ, phút và giây cho đến một sự kiện?
+Đồng hồ Đếm ngược chính là ứng dụng đó!
+
+Mục tiêu của Đồng hồ Đếm ngược là cung cấp một màn hình hiển thị
+liên tục giảm dần số tháng, ngày, giờ, phút và giây cho đến một sự kiện do người dùng nhập.
+
+### Các ràng buộc
+
+-   Chỉ sử dụng các hàm tích hợp sẵn của ngôn ngữ cho các phép tính của bạn thay vì dựa vào
+    một thư viện hoặc gói như [MomentJS](https://momentjs.com/). Điều này giả định,
+    tất nhiên, ngôn ngữ bạn chọn có đủ các hàm thao tác ngày và giờ
+    tích hợp sẵn.
+-   Bạn không được sử dụng bất kỳ trình tạo mã nào như trang
+    [Counting Down To](https://countingdownto.com/). Bạn nên phát triển
+    cách triển khai độc đáo của riêng mình.
+
+## Các Yêu cầu của Người dùng (User Stories)
+
+-   [ ] Người dùng có thể thấy một hộp nhập sự kiện chứa trường tên sự kiện,
+        trường ngày, thời gian tùy chọn và nút 'Start'.
+-   [ ] Người dùng có thể xác định sự kiện bằng cách nhập tên, ngày dự kiến
+        diễn ra và thời gian tùy chọn của sự kiện. Nếu thời gian bị bỏ qua,
+        nó được coi là vào nửa đêm ngày diễn ra sự kiện theo múi giờ
+        địa phương.
+-   [ ] Người dùng có thể thấy thông báo cảnh báo nếu tên sự kiện bị để trống.
+-   [ ] Người dùng có thể thấy thông báo cảnh báo nếu ngày hoặc giờ của sự kiện được nhập
+        không chính xác.
+-   [ ] Người dùng có thể thấy thông báo cảnh báo nếu thời gian cho đến ngày và giờ
+        của sự kiện đã nhập sẽ làm tràn độ chính xác của đồng hồ đếm ngược.
+-   [ ] Người dùng có thể nhấp vào nút 'Start' để thấy đồng hồ đếm ngược bắt đầu
+        hiển thị số ngày, giờ, phút và giây cho đến khi sự kiện diễn ra.
+-   [ ] Người dùng có thể thấy các yếu tố trong đồng hồ đếm ngược tự động
+        giảm dần. Ví dụ, khi số giây còn lại về 0, số
+        phút còn lại sẽ giảm đi 1 và số giây sẽ bắt đầu đếm ngược từ 59.
+        Quá trình này phải diễn ra từ giây cho đến vị trí ngày còn lại trong
+        màn hình đếm ngược.
+
+## Các tính năng bổ sung (Bonus features)
+
+-   [ ] Người dùng có thể lưu sự kiện để nó tồn tại qua các phiên làm việc.
+-   [ ] Người dùng có thể thấy một cảnh báo khi sự kiện đến.
+-   [ ] Người dùng có thể chỉ định nhiều hơn một sự kiện.
+-   [ ] Người dùng có thể thấy đồng hồ đếm ngược cho mỗi sự kiện đã được xác định.
+
+## Các liên kết và tài nguyên hữu ích
+
+-   Hình ảnh về đồng hồ đếm ngược dựa trên ống analog có thể được tìm thấy
+    [tại đây](https://nixieshop.com/)
+-   [`clearInterval` MDN](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/clearInterval)
+-   [`setInterval` MDN](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval)
+-   [Date MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date)
+
+## Các dự án mẫu
+
+[Đồng hồ/Đồng hồ Đếm ngược Đơn giản](https://codepen.io/karlo-stekovic/pen/OajKVK)
+[Đồng hồ Đếm ngược được xây dựng bằng React](https://www.florin-pop.com/blog/2019/05/countdown-built-with-react/)
