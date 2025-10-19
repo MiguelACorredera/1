@@ -1,0 +1,46 @@
+# Number Guessing Game
+
+**Tier:** 1-Beginner  
+
+A simple Python project where the computer selects a random number between 1 and 100, and the user has to guess it. The program tells the user if their guess is too high, too low, or correct.
+
+---
+
+## Features
+
+- Generates a random number between 1 and 100.  
+- Gives hints if the guess is too high or too low.  
+- Counts the number of attempts.  
+- Allows the user to play again after winning.  
+- Beginner-friendly and easy to understand.
+
+---
+
+## How to Play
+
+1. Run the Python script `number_guessing_game.py`.  
+2. Enter a number between 1 and 100.  
+3. Keep guessing until you find the correct number.  
+4. After winning, choose if you want to play again.
+
+---
+
+## Skills Learned
+
+- Python basics: variables, loops, conditional statements.  
+- Handling user input.  
+- Using the `random` module.  
+- Writing interactive terminal applications.
+
+---
+
+## Example Output
+
+Welcome to the Number Guessing Game!
+I'm thinking of a number between 1 and 100.
+Make a guess: 50
+Too low! Try again.
+Make a guess: 75
+Too high! Try again.
+Make a guess: 63
+Congratulations! You guessed the number 63 correctly in 3 attempts!
