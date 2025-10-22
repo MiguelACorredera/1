@@ -1,12 +1,12 @@
-# Sales Reciepts
+# Sales Receipts
 
 **Tier:** 2-Intermediate
 
 In the [First DB App](../1-Beginner/First-DB-App.md) you were able to learn the basics of
 how to use the IndexedDB database that's built into the browser. In Sales
-Reciepts you'll take this a step further by creating an app that records
-point of sales receipts, presumably for subsequent balancing against cash in
-the stores cash register.
+Receipts you'll take this a step further by creating an app that records
+point-of-sale receipts, presumably for subsequent balancing against cash in
+the store's cash register.
 
 The objective of Sales Receipts is to implement point-of-sale functionality for
 a merchant and to make a record of all sales in a database.
@@ -23,7 +23,7 @@ the following attributes:
     - Description
     - Unit price
 
-- Developer should use her UI/UX skills to create a pleasant and efficient
+- Developer should use their UI/UX skills to create a pleasant and efficient
 window layout that makes it easy for the user to purchase items and display 
 purchase history.
 
@@ -38,19 +38,19 @@ identifying information (PII) in a browser based database.
 
 ## User Stories
 
--   [ ] User can see an purchase panel containing buttons for each item containing
+-   [ ] User can see a purchase panel containing buttons for each item containing
 the item number, description, and unit price, as well as a 'Clear' and a
 'Checkout' button.
 -   [ ] User can click an item button to make a purchase.
--   [ ] User can see an field displaying the total sale amount incremented as
+-   [ ] User can see a field displaying the total sale amount incremented as
 items are purchased.
--   [ ] User can see a reciept panel displaying the date and time of the sale,
+-   [ ] User can see a receipt panel displaying the date and time of the sale,
 as well as all items selected for purchase. This includes the item number,
 description, and unit price.
 -   [ ] User can click the 'Clear' button to clear all purchases at any time
 before checking out.
--   [ ] User can click the 'Checkout' button to complete purchase all selected
-items. The final total purchase amount will be added to the end of the reciept
+-   [ ] User can click the 'Checkout' button to complete the purchase of all selected
+items. The final total purchase amount will be added to the end of the receipt
 panel and all selected items will be added to the database.
 -   [ ] User can see the receipt panel cleared after all items have been added
 to the database.
@@ -63,7 +63,7 @@ delete the record of all purchases from the database.
 
 ## Bonus features
 
--   [ ] User can see an thumbnail image of the items on the item buttons.
+-   [ ] User can see a thumbnail image of the items on the item buttons.
 -   [ ] User can see the 'Clear' button replaced by 'Clear Entry' and 'Cancel
 All' buttons under the purchase panel
 -   [ ] User can click the 'Clear Entry' button to clear the last selected item
@@ -84,4 +84,4 @@ rows added to the database.
 
 ## Example projects
 
-- N/a
+- N/A
