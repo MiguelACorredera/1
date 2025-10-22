@@ -129,7 +129,7 @@ required to complete them.
 | [Contribution Tracker App](./Projects/3-Advanced/Contribution-Tracker-App.md) | Track funds donated to charity                                      | 3-Advanced |
 | [Elevator](./Projects/3-Advanced/Elevator-App.md)                             | Elevator simulator                                                  | 3-Advanced |
 | [Fast Food Simulator](./Projects/3-Advanced/FastFood-App.md)                  | Fast Food Restaurant Simulator                                      | 3-Advanced |
-| [Instagram Clone](./Projects/3-Advanced/Instagram-Clone-App.md)               | A clone of Facebook's Instagram app                                 | 3-Advanced |
+| [Instagram Clone](./Projects/3-Advanced/Instagram-Clone-App.md)               | A clone of Meta's Instagram app                                     | 3-Advanced |
 | [GitHub Timeline](./Projects/3-Advanced/GitHub-Timeline-App.md)               | Generate a timeline of a users GitHub Repos                         | 3-Advanced |
 | [Kudos Slackbot](./Projects/3-Advanced/Kudos-Slackbot.md)                     | Give recognition to a deserving peer                                | 3-Advanced |
 | [Movie App](./Projects/3-Advanced/Movie-App.md)                               | Browse, Find Ratings, Check Actors and Find you next movie to watch | 3-Advanced |
@@ -166,8 +166,8 @@ Do you have any suggestions on how we could improve this project overall? Let us
 
 ### Main Contributors 🙂🙂
 
--   **Florin Pop**: [Twitter](https://twitter.com/florinpop1705) - [YouTube Channel](https://youtube.com/florinpop) - [website](https://florin-pop.com).
--   **Jim Medlock**: [Twitter](https://twitter.com/jd_medlock) - [articles](https://medium.com/@jdmedlock)
+-   **Florin Pop**: [𝕏 (formerly Twitter)](https://twitter.com/florinpop1705) - [YouTube Channel](https://youtube.com/florinpop) - [website](https://florin-pop.com).
+-   **Jim Medlock**: [𝕏 (formerly Twitter)](https://twitter.com/jd_medlock) - [articles](https://medium.com/@jdmedlock)
 
 ## 100Days100Projects 🚀
 
