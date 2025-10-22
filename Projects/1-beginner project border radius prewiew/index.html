@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Border-radius Previewer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Border-radius Previewer</h1>
+
+        <div id="preview-box"></div>
+
+        <div class="controls-grid">
+            <div class="control-group">
+                <label for="tlh">Top Left (H):</label>
+                <input type="range" id="tlh" min="0" max="200" value="25">
+                <span id="tlh-value">25px</span>
+            </div>
+            <div class="control-group">
+                <label for="trh">Top Right (H):</label>
+                <input type="range" id="trh" min="0" max="200" value="25">
+                <span id="trh-value">25px</span>
+            </div>
+            <div class="control-group">
+                <label for="brh">Bottom Right (H):</label>
+                <input type="range" id="brh" min="0" max="200" value="25">
+                <span id="brh-value">25px</span>
+            </div>
+            <div class="control-group">
+                <label for="blh">Bottom Left (H):</label>
+                <input type="range" id="blh" min="0" max="200" value="25">
+                <span id="blh-value">25px</span>
+            </div>
+
+            <div id="vertical-controls" class="hidden">
+                <hr>
+                <h2>Bonus: Vertical Radius (8-Value Mode)</h2>
+                <div class="control-group">
+                    <label for="tlv">Top Left (V):</label>
+                    <input type="range" id="tlv" min="0" max="200" value="25">
+                    <span id="tlv-value">25px</span>
+                </div>
+                <div class="control-group">
+                    <label for="trv">Top Right (V):</label>
+                    <input type="range" id="trv" min="0" max="200" value="25">
+                    <span id="trv-value">25px</span>
+                </div>
+                <div class="control-group">
+                    <label for="brv">Bottom Right (V):</label>
+                    <input type="range" id="brv" min="0" max="200" value="25">
+                    <span id="brv-value">25px</span>
+                </div>
+                <div class="control-group">
+                    <label for="blv">Bottom Left (V):</label>
+                    <input type="range" id="blv" min="0" max="200" value="25">
+                    <span id="blv-value">25px</span>
+                </div>
+            </div>
+        </div>
+
+        <label class="toggle-switch">
+            <input type="checkbox" id="toggle-8-value">
+            <span class="slider round"></span>
+            8-Value Mode
+        </label>
+        
+        <hr>
+        
+        <div class="output-section">
+            <textarea id="css-output" readonly></textarea>
+            <button id="copy-button">Copy CSS</button>
+            <p id="copy-message" class="hidden">Copied!</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

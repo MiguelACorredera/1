@@ -1,0 +1,184 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    padding: 20px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.app-container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 700px;
+}
+
+h1 {
+    text-align: center;
+    color: #007bff;
+    margin-bottom: 25px;
+}
+
+h2 {
+    color: #333;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 5px;
+    margin-top: 20px;
+}
+
+/* --- Controls Panel --- */
+.controls-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    font-weight: 600;
+}
+
+#gmt-input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-left: 10px;
+    width: 80px;
+    text-align: center;
+    font-size: 1em;
+}
+
+.search-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#find-cities-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.2s;
+}
+
+#find-cities-btn:hover {
+    background-color: #218838;
+}
+
+/* Custom Checkbox (Bonus Feature) */
+.checkbox-container {
+    display: block;
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    user-select: none;
+    font-weight: 500;
+}
+.checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 18px;
+    width: 18px;
+    background-color: #eee;
+    border-radius: 3px;
+}
+.checkbox-container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+.checkbox-container input:checked ~ .checkmark {
+    background-color: #007bff;
+}
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+.checkbox-container input:checked ~ .checkmark:after {
+    display: block;
+}
+.checkbox-container .checkmark:after {
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+
+/* --- City List --- */
+#city-list ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+#city-list li {
+    background-color: #f8f8f8;
+    padding: 8px;
+    border-radius: 4px;
+    border-left: 4px solid #007bff;
+    font-size: 0.9em;
+}
+
+/* --- Output Area --- */
+.output-area {
+    margin-top: 20px;
+}
+
+.summary {
+    font-weight: bold;
+    color: #28a745;
+    margin-bottom: 15px;
+}
+
+#results-list {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+#results-list li {
+    margin-bottom: 5px;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #eee;
+    margin: 20px 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .search-options {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    #city-list ul {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
