@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TastyBite</title>
+
+    <!-- Internal CSS -->
+    <style>
+        *{
+            margin:0px;
+            padding:0px;
+            box-sizing: border-box;
+        }
+        body{
+            margin:0px;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .navbar{
+            background-color: rgb(52, 52, 52);
+            justify-content: space-between;
+            display:flex;
+            align-items:center;
+            padding:10px 20px;
+        }
+        .navbar ul{
+            list-style-type: none;
+            overflow:hidden;
+        }
+        .navbar a{
+            color:white;
+            text-decoration: none;
+            float:right;
+            margin:0px; 
+            margin-bottom:10px; 
+            margin-top:0px; 
+            font-size:20px;
+            margin-right:10px;
+        }
+        .navbar .tastebite{
+            color:white;
+            margin-left:30px;
+            font-size:40px;
+        }
+        .navbar a:hover{
+            background-color: grey;
+        }
+
+        header{
+            background-color: rgb(222, 221, 221);
+            text-align:center;
+            height:150px;
+            padding:40px;
+        }
+        header h3{
+            font-size:30px;
+        }
+        header h4{
+            font-size:20px;
+            margin-top: 10px;
+        }
+
+        main{
+            margin:30px;
+        }
+        h3{
+            font-size:25px;
+        }
+        #food{
+            font-weight:bold;
+            margin-top:5px;
+            font-size:20px;
+        }
+
+        #name, #date, #time, #guests{
+            width:100%;
+            height:4vh;
+            margin-top:5px;
+            margin-bottom:5px;
+            border-radius:3px;
+            border-width: 3px;
+            border-color: rgb(65, 64, 64);
+            padding:10px;
+        }
+
+        button{
+            font-size:15px;
+            padding:5px;
+            cursor: pointer;
+        }
+        button:hover{
+            background-color:rgb(209, 205, 205);
+        }
+
+        p{
+            font-size:20px;
+            font-style:italic;
+        }
+
+        footer{
+            background-color: rgb(77, 76, 76);
+            text-align:center;
+            color:white;
+            padding:5px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="tastebite">TastyBite</div>
+        <ul>
+           <li id="contact"> <a href="contact.html">Contact</a></li>
+            <li id="booking"><a href="booking.html">Booking</a></li>
+            <li id="menu"><a href="menu.html">Menu</a></li>
+            <li id="home"><a href="home.html">Home</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h3>Welcome to TastyBite</h3>
+        <h4>Delicious food. Cozy vibes.</h4>
+    </header>
+
+    <main>
+        <h3>Our Menu</h3>
+        <dl>
+            <dt id="food">Margherita Pizza</dt>
+            <dd id="pizzaD">Classic tomato and cheese <br>$10</dd>
+
+            <dt id="food">Pasta Alfredo</dt>
+            <dd id="pastaD">Rich & Creamy<br>$12</dd>
+
+            <dt id="food">Cheesecake</dt>
+            <dd id="cheesecakeD">Served chilled<br>$6</dd>
+        </dl>
+
+        <h3>Book a Table</h3>
+        <form method="post">
+            <label for="name">Your Name</label><br>
+            <input id="name" name="name" type="text" placeholder="Your Name" required><br>
+            <label for="date">Date</label><br>
+            <input id="date" name="date" type="date" required><br>
+            <label for="time">Time</label><br>
+            <input id="time" name="time" type="time" required><br>
+            <label for="guests">Number of Guests</label><br>
+            <input id="guests" name="guests" type="number" placeholder="Guests" required><br>
+            <button>Book Now</button>
+        </form>
+
+        <h3>Customer Reviews</h3>
+        <p>"Amazing food and great ambience!" - Sarah</p>
+        <p>"The best pasta I've ever had!" - John</p>
+    </main>
+
+    <footer>
+        Visit us at: 123 Food Street, Delhi | Contact: 8890477291
+    </footer>
+</body>
+</html>
