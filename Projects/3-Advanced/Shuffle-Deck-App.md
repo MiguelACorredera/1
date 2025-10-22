@@ -38,7 +38,10 @@ number of rounds is changed before all three tests have been run.
 the dialog with no changes.
 -   [ ] User can click the 'OK' button in the warning dialog to clear the
 output area and close the warning dialog.
- 
+-   [ ] If a user starts a new test without changing the number of rounds, the existing timers for the other tests should remain active.
+-   [ ] If a user changes the number of rounds, all timers should reset and a new warning should be triggered.
+
+
 ## Bonus features
 
 -   [ ] User can see a third algorithm button - 'WELL512a.c'.
