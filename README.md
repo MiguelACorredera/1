@@ -87,6 +87,7 @@ required to complete them.
 | [Calculator CLI](./Projects/2-Intermediate/Calculator-CLI.md)                     | Create a basic calculator cli.                     | 2-Intermediate |
 | [Card Memory Game](./Projects/2-Intermediate/Card-Memory-Game.md)                 | Memorize and match hidden images                   | 2-Intermediate |
 | [Charity Finder App](./Projects/2-Intermediate/Charity-Finder-App.md)             | Find a Global Charity to donate to                 | 2-Intermediate |
+| [Code Snippet Manager](./Projects/2-Intermediate/Code-Snippet-Manager.md) 🌟      | Store and organize your code snippets              | 2-Intermediate |
 | [Chrome Theme Extension](./Projects/2-Intermediate/Chrome-Theme-Extension.md)     | Build your own chrome theme extention.             | 2-Intermediate |
 | [Currency Converter](./Projects/2-Intermediate/Currency-Converter.md)             | Convert one currency to another.                   | 2-Intermediate |
 | [Drawing App](./Projects/2-Intermediate/Drawing-App.md)                           | Create digital artwork on the web                  | 2-Intermediate |
@@ -120,6 +121,7 @@ required to complete them.
 
 | Name                                                                          | Short Description                                                   | Tier       |
 | ----------------------------------------------------------------------------- | ------------------------------------------------------------------- | ---------- |
+| [AI Model Playground](./Projects/3-Advanced/AI-Model-Playground.md) 🌟        | Interactive platform for experimenting with ML models               | 3-Advanced |
 | [Battleship Bot](./Projects/3-Advanced/Battleship-Bot.md)                     | Create a Discord bot that plays Battleship                          | 3-Advanced |
 | [Battleship Game Engine](./Projects/3-Advanced/Battleship-Game-Engine.md)     | Create a callable engine to play the Battleship game                | 3-Advanced |
 | [Boole Bots Game](./Projects/3-Advanced/Boole-Bot-Game.md)                    | Battling Bots driven by Boolean algebra                             | 3-Advanced |
