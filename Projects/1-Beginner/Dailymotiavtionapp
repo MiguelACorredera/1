@@ -1,0 +1,48 @@
+# Dailymotivation
+
+**Tier:** 1-Beginner
+
+Everyone has days when they need a little boost of motivation.
+The Daily Motivation App displays inspiring quotes to encourage positivity and productivity.
+This project helps beginners practice working with DOM manipulation, event handling, and optional API fetching.
+
+The goal of this app is to build a simple, responsive interface that shows one motivational quote at a time — either randomly or updated daily.
+
+## User Stories
+
+-  [ ] User can view a motivational quote displayed on the page.
+
+ [ ] User can click a “New Quote” button to view another random quote.
+
+ [ ] User can see who said the quote (author’s name).
+
+ [ ] User sees an error message if the quote cannot be loaded.
+
+ [ ] User can toggle between light mode and dark mode.
+
+## Bonus features
+
+-   [ ] User can save favorite quotes to localStorage.
+
+ [ ] User can share a quote on social media (Twitter/X, Instagram Story, etc.).
+
+ [ ] User can hear the quote using the Speech Synthesis API.
+
+ [ ] User sees an animated background gradient that changes over time.
+
+ [ ] App fetches quotes from a quotes API (like Quotable.io).
+
+## Useful links and resources
+
+[Binary number system](https://en.wikipedia.org/wiki/Binary_number)
+[Quotable app] (https://api.quotable.io)
+[CSS gradient generator for background] (https://cssgradient.io/)
+
+## Example projects
+
+Try not to view this until you've developed your own solution:
+
+-   [Binary to decimal conversion program for beginners](https://www.youtube.com/watch?v=YMIALQE26KQ)
+-   [Random quote machine using react] (https://codepen.io/freeCodeCamp/full/qRZeGZ)
+-   [Simple quote generator using vanilla] (https://www.geeksforgeeks.org/build-a-random-quote-generator-using-html-css-and-javascript/)
+-   [Quote of the day app using API and JS] (https://github.com/dwyl/quotes)
