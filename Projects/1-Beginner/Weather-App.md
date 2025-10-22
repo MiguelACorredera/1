@@ -24,3 +24,5 @@ A weather application to get the temperature, weather condition and whether it i
 
 - [Weather App on Codepen](https://codepen.io/tutsplus/pen/gObLaEP) by [George Martsoukos]
 - [Coding A Weather App In Pure JavaScipt](https://www.youtube.com/watch?v=ZPG2wGNj6J4)
+- [Weather App by Flutter](https://github.com/akshit397a/FlutterDev/tree/main/MainApp/WeatherApp/lib) by [akshit397a]
+
