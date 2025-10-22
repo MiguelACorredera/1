@@ -1,0 +1,42 @@
+# Application Name
+
+**Tier:**  1-Beginner
+
+Practice and test your knowledge by answering questions in a quiz application. As the internet is evolving day by day music and dramas different web series are the hot topics to binge watch. This application will let people's to allow play a quiz about their favourite music the groups and the dramas and web series. People are so into k-content these days, so it will be a hit.
+
+As a developer you can create a k-pop quiz application for testing coding skills of other developers. (HTML, CSS, JavaScript, Python, PHP, etc...)
+
+
+
+## User Stories
+
+-   [ ] User can start the k-pop quiz by pressing a `button`
+-   [ ] User can see a question with 4 possible answers
+-   [ ] After selecting an answer, display the next question to the User. Do this until the quiz is finished
+-   [ ] At the end, the User can see the following statistics
+    -   Time it took to finish the k-pop quiz
+    -   How many correct answers did he or she get
+    -   A message showing if he or she `passed` or `failed` the quiz
+
+
+## Bonus features
+
+
+-   [ ] User can share the result of a quiz on social media
+-   [ ] Add multiple quizzes related to korean pop music, k-dramas, movies etc. to the application. User can select which one to take
+-   [ ] User can create an account and have all the scores saved in his dashboard. User can complete a quiz multiple times
+
+
+## Useful links and resources
+
+-   [Open Trivia Database](https://opentdb.com/api_config.php)
+
+-  (https://www.cbr.com/k-pop-korean-dramas-ranked/)
+-  (https://www.netflix.com/tudum/articles/netflix-k-dramas-k-pop-idols)
+-  (https://pixabay.com/music/search/kpop/)
+
+## Example projects
+
+[an example](https://www.behance.net/search/projects/kpop)
+
+
