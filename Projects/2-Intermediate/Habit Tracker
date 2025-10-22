@@ -1,0 +1,27 @@
+# Habit Tracker
+
+**Tier:** 2-Intermediate
+
+This is an app where someone can track their everyday habits. This will help the person visualize their progress over time and can also help the person get rid of bad habits.
+
+## User Stories
+
+-   [ ] User can add a new habit with a title, description, and frequency
+
+-   [ ] User can mark a habit as complete for a specific day
+
+-   [ ] User can view a calendar or grid showing habit streaks
+
+-   [ ] User can edit or delete habits
+
+-   [ ] User can track progress through visual stats and charts
+
+-   [ ] User can reset their streak or progress on demand
+
+
+## Useful links and resources
+
+-	[React.js Documentation](https://reactjs.org/docs/getting-started.html)
+-	[Chart.js Documentation](https://www.chartjs.org/docs/latest/)
+-	[Node.js + Express Guide](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs)
+-	[Firebase Docs](https://firebase.google.com/docs)
