@@ -1,45 +1,68 @@
 # Charity Finder
 
-**Tier:** 2-Intermediate
+**Tier:** 2 — Intermediate  
+**Hacktoberfest-Friendly Project**
 
-With the Charity Finder app you'll not only get to refine your Web Developer
-skills, but you will also have an opportunity to see how you can do good. The
-objective of this app is to utilize the [Global Giving](https://www.globalgiving.org/) organizations API to provide your users with a list of global charities they
-can search to find a charity that matches their philanthropic interests.
+The Charity Finder app helps you refine your web development skills while contributing to a good cause.  
+It uses the [Global Giving API](https://www.globalgiving.org/api/) to let users search and explore global charities that match their interests.
 
-### Constraints
-- Since the app is asking the user to choose and contribute to a charitable
-cause it's important that the presentation of information be clear and concise.
-Just as important is the need for the UI/UX to be polished and engaging to use.
+---
 
-   Although this is true of all apps, its even more the case here since each
-user that abandons the site represents the loss of an opportunity to do good
-(see ['What is Web Site Conversion?](##useful-links-and-resources)) below.
+## Features
+
+- Search for charities by organization name, home country, or countries served.
+- Display detailed information cards for matching organizations.
+- View charity logos and visit each organization’s website.
+- Clean, responsive UI for an engaging and trustworthy user experience.
+- Optional filters for themes, projects, and impact areas.
+
+---
 
 ## User Stories
 
--   [ ] User can see a page heading containing the application name.
--   [ ] User can see an overview of what the app is intended for in 'splash'
-page format.
--   [ ] User can see a search area containing an set of drop down boxes that
-allow the user to specify search criteria for charitable organizations
-including:
-    - Organization name
-    - Organizations home country
-    - Countries the organization serves
--   [ ] User can see a 'Search' button
--   [ ] User can click on the 'Search' button to display information cards
-for the matching organizations in a search results area.
--   [ ] User can see organization information cards in the search results area
-containing:
-    - ID
-    - Name
-    - Address
-    - Logo
--   [ ] User can click the logo in the organizations information card to open a
-new window to that organizations home page.
--   [ ] User can see a page footer with links to your GitHub and social media
-accounts including social media icons (like the Twitter icon).
+- [ ] User can see a page heading with the application name.  
+- [ ] User can see an overview of the app in a splash or introduction page.  
+- [ ] User can search for charities using dropdown filters:  
+  - Organization name  
+  - Home country  
+  - Countries served  
+- [ ] User can click a "Search" button to display information cards.  
+- [ ] User can view charity information cards containing:  
+  - ID  
+  - Name  
+  - Address  
+  - Logo  
+- [ ] User can click a charity logo to open the organization’s website in a new tab.  
+- [ ] User can see a footer with links to GitHub and social media accounts.
+
+---
+
+## Bonus Features
+
+- [ ] Add a dropdown filter for charity themes (e.g., Health, Education, Environment).  
+- [ ] Allow multiple selections in dropdown filters.  
+- [ ] Display a project link (for example, "PROJECT") on the information card.  
+- [ ] Clicking the project link shows detailed project information from the Global Giving API.  
+
+Hint: Examine the JSON or XML data returned by the API to understand how projects and organizations are linked.
+
+---
+
+## Tech Stack
+
+- Frontend: HTML, CSS (or Tailwind), JavaScript (or React / Vue)  
+- API: [Global Giving API](https://www.globalgiving.org/api/)  
+- Optional: Node.js backend for caching or extended data handling  
+- Version Control: Git and GitHub
+
+---
+
+## Getting Started
+
+### 1. Clone the repository
+```bash
+git clone https://github.com/<your-username>/charity-finder.git
+cd charity-finder
 
 ## Bonus features
 
