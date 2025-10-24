@@ -1,6 +1,8 @@
-# Calculator
+# Calculator App
 
-**Tier:** 1-Beginner
+Tier: 1-Beginner
+
+Category: Utilities
 
 Calculators are not only one of the most useful tools available, but they are
 also a great way to understand UI and event processing in an application. In
