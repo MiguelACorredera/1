@@ -2,7 +2,7 @@
 
 **Tier:** 1-Beginner
 
-A stopwatch helps you track the time you spent on activities.
+A stopwatch helps you track the time you spend on activities.
 
 ## User Stories
 
