@@ -26,6 +26,5 @@ A mobile-first application that automatically notifies selected emergency contac
 - [Expo documentation](https://docs.expo.dev/) (optional for rapid mobile prototyping)
 
 ## Example Projects
-- [Safety App Example](https://github.com/ProjectExample/SafetyApp)
-- [Check-In Tracker](https://github.com/ProjectExample/CheckInTracker)
+- [Safety App Example](https://github.com/mNik033/RescuWave)
 
