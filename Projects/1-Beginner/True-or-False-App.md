@@ -4,7 +4,7 @@
 
 Something every developer needs to clearly understand is the result of
 conditional expressions like `x === y`. This is a bit more involved for
-Javascript developers who must also understand the concept of _truthiness_.
+JavaScript developers who must also understand the concept of _truthiness_.
 
 TrueOrFalse helps by displaying the result when a conditional operator is
 applied to two values. Users can use this to test their knowledge and
@@ -19,7 +19,7 @@ the `eval()` function to generate the result of the conditional.
 -   [ ] User can enter two strings to be compared
 -   [ ] User can enter a valid Javascript conditional operator to be used to compare the two strings
 -   [ ] User can see the result of the conditional as TRUE or FALSE
--   [ ] User can see a warning if the input strings or conditional operator that has been entered is not valid
+-   [ ] User can see a warning if the input strings or conditional operator entered is not valid
 
 ## Bonus features
 
