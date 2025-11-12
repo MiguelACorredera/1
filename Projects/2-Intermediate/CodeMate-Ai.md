@@ -38,10 +38,6 @@ It helps developers, students, and learners quickly grasp complex code logic usi
 
 ---
 
-
-
----
-
 ## 🧠 How It Works
 
 1. User pastes code into the input area.  
@@ -64,18 +60,15 @@ cd frontend
 yarn dev
 
 cd ../backend
-yarn start
+yarn dev
+```
 
-
----
-
-👨‍💻 Author
-
+### 👨‍💻 Author
 Aswanth KT
 MERN Stack Developer | AI & Web Enthusiast
 
-🌐 Portfolio[https://aswanthkt-portfolio.vercel.app/]
+[🌐 Portfolio](https://aswanthkt-portfolio.vercel.app/)
 
-💼 LinkedIn[https://www.linkedin.com/in/aswanth-kt/]
+[💼 LinkedIn](https://www.linkedin.com/in/aswanth-kt/)
 
-🐙 GitHub[https://github.com/aswanth-kt]
+[🐙 GitHub](https://github.com/aswanth-kt)
