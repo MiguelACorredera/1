@@ -67,8 +67,8 @@ yarn dev
 Aswanth KT
 MERN Stack Developer | AI & Web Enthusiast
 
-[🌐 Portfolio](https://aswanthkt-portfolio.vercel.app/)
+🌐 [Portfolio](https://aswanthkt-portfolio.vercel.app/)
 
-[💼 LinkedIn](https://www.linkedin.com/in/aswanth-kt/)
+💼 [LinkedIn](https://www.linkedin.com/in/aswanth-kt/)
 
-[🐙 GitHub](https://github.com/aswanth-kt)
+🐙 [GitHub](https://github.com/aswanth-kt)
