@@ -58,11 +58,11 @@ The purpose of this application is to:
 
 ## Useful Links and Resources
 
-- https://react.dev/learn
-- https://developer.mozilla.org/en-US/docs/Web/API/setTimeout
-- https://jwt.io/introduction
-- https://socket.io/docs/
-- https://owasp.org/www-project-top-ten/
+- [React – Learn](https://react.dev/learn)
+- [MDN – setTimeout](https://developer.mozilla.org/en-US/docs/Web/API/setTimeout)
+- [JWT Introduction](https://jwt.io/introduction)
+- [Socket.IO Documentation](https://socket.io/docs/)
+- [OWASP Top Ten](https://owasp.org/www-project-top-ten/)
 
 ---
 
