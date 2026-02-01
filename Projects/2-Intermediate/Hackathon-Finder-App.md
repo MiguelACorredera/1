@@ -65,4 +65,4 @@ The purpose of this application is to:
 
 - Devpost Hackathon Listings
 - Major League Hacking (MLH) Platform
-- Hackerearth Hackathons
+- HackerEarth Hackathons
