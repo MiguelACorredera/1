@@ -10,15 +10,22 @@ Find your next movie or create your watchlist with this App. It include reviews,
 ## User Stories
 
 -   [ ] User can see all the latest movie on the front page
+-   [ ] User can search for a specific movie they want to watch
+-   [ ] User can filter through different genres of movies
 -   [ ] User scroll down to see all other movies according to release date
 -   [ ] User can click on any of the movie to go to their own separate page
 -   [ ] User can then see all about the movie ratings, about, actors present on each separate movie page
+-   [ ] User will be able to see the trailer of the movie while selecting their movie.
 
 ## Bonus features
 
 -   [ ] User can create an account
 -   [ ] User can create their own watch list
 -   [ ] User can review movies
+-   [ ] User can rate movies
+-   [ ] User can comment on movies
+-   [ ] User can share their reviews on social media platforms like Facebook, Twitter etc.
+
 
 ## Useful links and resources
 
