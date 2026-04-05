@@ -40,6 +40,7 @@ required to complete them.
 
 ### Tier-1: Beginner Projects
 
+- **AI Bug Reporter** - Build a widget that captures screenshots, voice recordings, console errors, and uses AI to triage bug severity. [Example](https://github.com/Ankitajainkuniya/glitch-widget)
 | Name                                                                              | Short Description                                          | Tier       |
 | --------------------------------------------------------------------------------- | ---------------------------------------------------------- | ---------- |
 | [Bin2Dec](./Projects/1-Beginner/Bin2Dec-App.md)                                   | Binary-to-Decimal number converter                         | 1-Beginner |
