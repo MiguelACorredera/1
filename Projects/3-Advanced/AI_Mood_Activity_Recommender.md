@@ -1,6 +1,6 @@
 # AI Mood-Based Activity Recommender
 
-**Tier:** 3-Intermediate
+**Tier:** 3-Advanced
 
 ## Description
 
