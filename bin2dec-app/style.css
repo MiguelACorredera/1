@@ -1,0 +1,157 @@
+:root {
+  --bg-a: #fbf3ea;
+  --bg-b: #d6efe2;
+  --card-bg: rgba(255, 255, 255, 0.82);
+  --text-main: #1f2937;
+  --text-muted: #5b6878;
+  --accent: #006d77;
+  --accent-strong: #00545c;
+  --danger: #bf1f2f;
+  --ring: rgba(0, 109, 119, 0.28);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Space Grotesk", sans-serif;
+  color: var(--text-main);
+  background:
+    radial-gradient(circle at 12% 20%, rgba(250, 173, 20, 0.2), transparent 42%),
+    radial-gradient(circle at 82% 15%, rgba(0, 109, 119, 0.23), transparent 36%),
+    linear-gradient(145deg, var(--bg-a), var(--bg-b));
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.app-shell {
+  width: min(640px, 100%);
+}
+
+.card {
+  border-radius: 24px;
+  padding: 28px;
+  background: var(--card-bg);
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 24px 60px rgba(18, 38, 63, 0.18);
+  animation: rise-in 420ms ease-out;
+}
+
+.eyebrow {
+  margin: 0;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  font-size: 0.76rem;
+}
+
+h1 {
+  margin: 10px 0 6px;
+  font-size: clamp(1.5rem, 3.2vw, 2rem);
+}
+
+.subtitle {
+  margin: 0 0 18px;
+  color: var(--text-muted);
+}
+
+form {
+  display: grid;
+  gap: 10px;
+}
+
+label {
+  font-weight: 600;
+}
+
+input[type="text"] {
+  width: 100%;
+  border: 1px solid rgba(31, 41, 55, 0.26);
+  border-radius: 12px;
+  padding: 11px 12px;
+  font: inherit;
+  transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 4px var(--ring);
+}
+
+.hint {
+  margin: 0 0 6px;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.toggle-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  margin: 2px 0 8px;
+}
+
+button {
+  border: none;
+  border-radius: 12px;
+  padding: 12px;
+  font: inherit;
+  font-weight: 700;
+  background: var(--accent);
+  color: #fff;
+  cursor: pointer;
+  transition: transform 140ms ease, background-color 140ms ease;
+}
+
+button:hover {
+  background: var(--accent-strong);
+  transform: translateY(-1px);
+}
+
+.error {
+  min-height: 1.4em;
+  margin: 14px 0 8px;
+  color: var(--danger);
+  font-weight: 600;
+}
+
+.output {
+  display: block;
+  width: 100%;
+  margin-top: 8px;
+  border: 1px dashed rgba(31, 41, 55, 0.35);
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 12px;
+  padding: 12px;
+  font-size: 1.15rem;
+  font-weight: 700;
+  min-height: 50px;
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(14px) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (max-width: 640px) {
+  .card {
+    padding: 22px;
+    border-radius: 18px;
+  }
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bin2Dec Practice App</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <section class="card" aria-labelledby="title">
+      <p class="eyebrow">CommitVerse Practice</p>
+      <h1 id="title">Binary to Decimal Converter</h1>
+      <p class="subtitle">Enter a binary number and get its base-10 value.</p>
+
+      <form id="converter-form" novalidate>
+        <label for="binary-input">Binary Input</label>
+        <input
+          id="binary-input"
+          name="binary"
+          type="text"
+          inputmode="numeric"
+          maxlength="8"
+          placeholder="Example: 10110101"
+          aria-describedby="input-hint error-text"
+          required
+        />
+        <p id="input-hint" class="hint">Up to 8 digits (0 or 1 only)</p>
+
+        <label class="toggle-row" for="allow-variable-length">
+          <input id="allow-variable-length" type="checkbox" />
+          <span>Bonus mode: allow variable length input</span>
+        </label>
+
+        <button type="submit">Convert</button>
+      </form>
+
+      <p id="error-text" class="error" role="alert" aria-live="polite"></p>
+
+      <label for="decimal-output">Decimal Output</label>
+      <output id="decimal-output" class="output" aria-live="polite">-</output>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
