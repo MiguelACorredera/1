@@ -3,9 +3,9 @@
 **Tier:** 2-Intermediate
 
 Build a simple social media feed using HTML, CSS, and JavaScript (no backend).
-Users should be able to create, view, edit, and manage posts containing an
-image or video with a caption. Post data should persist in browser storage such
-as IndexedDB.
+Users should be able to create, view, and manage posts containing an image or
+video with a caption. Post data should persist in browser storage such as
+IndexedDB (or similar browser storage).
 
 ## User Stories
 
@@ -24,18 +24,18 @@ as IndexedDB.
 
 ## Useful links and resources
 
--   [HTML Reference - MDN](https://developer.mozilla.org/docs/Web/HTML)
--   [CSS Reference - MDN](https://developer.mozilla.org/docs/Web/CSS)
--   [JavaScript Reference - MDN](https://developer.mozilla.org/docs/Web/JavaScript)
--   [DOM Manipulation - MDN](https://developer.mozilla.org/docs/Web/API/Document_Object_Model)
+-   [HTML Reference - MDN](https://developer.mozilla.org/en-US/docs/Web/HTML)
+-   [CSS Reference - MDN](https://developer.mozilla.org/en-US/docs/Web/CSS)
+-   [JavaScript Reference - MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+-   [DOM Manipulation - MDN](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model)
 -   [CSS Flexbox - CSS-Tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 -   [CSS Grid - CSS-Tricks](https://css-tricks.com/snippets/css/complete-guide-grid/)
 -   [Dark Mode - CSS-Tricks](https://css-tricks.com/a-complete-guide-to-dark-mode-on-the-web/)
--   [File API - MDN](https://developer.mozilla.org/docs/Web/API/File_API/Using_files_from_web_applications)
--   [FileReader - MDN](https://developer.mozilla.org/docs/Web/API/FileReader)
--   [IndexedDB - MDN](https://developer.mozilla.org/docs/Web/API/IndexedDB_API)
--   [localStorage - MDN](https://developer.mozilla.org/docs/Web/API/Window/localStorage)
--   [sessionStorage - MDN](https://developer.mozilla.org/docs/Web/API/Window/sessionStorage)
+-   [File API - MDN](https://developer.mozilla.org/en-US/docs/Web/API/File_API/Using_files_from_web_applications)
+-   [FileReader - MDN](https://developer.mozilla.org/en-US/docs/Web/API/FileReader)
+-   [IndexedDB - MDN](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API)
+-   [localStorage - MDN](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
+-   [sessionStorage - MDN](https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage)
 
 ## Example projects
 
