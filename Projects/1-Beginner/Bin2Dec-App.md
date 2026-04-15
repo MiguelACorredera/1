@@ -45,3 +45,5 @@ Try not to view this until you've developed your own solution:
 -   [Binary to Decimal converter using React](https://github.com/geoffctn/Bin2Dec)
 -   [Matrix-like Binary to Decimal converter using Angular](https://github.com/ZangiefWins/MatrixBin2Dec)
     -   [Live preview on heroku](https://matrix-bin2dec.herokuapp.com/)
+-   [Bin2Dec with only html, css and vanilla js](https://github.com/EduardoSilSantos/bin2dec)
+    -   [Online on GitHub Pages](https://eduardosilsantos.github.io/bin2dec/)
