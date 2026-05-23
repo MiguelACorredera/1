@@ -120,6 +120,7 @@ required to complete them.
 
 | Name                                                                          | Short Description                                                   | Tier       |
 | ----------------------------------------------------------------------------- | ------------------------------------------------------------------- | ---------- |
+| [Attedance Sys.](./Projects/3-Advanced/Face-Recognition-Attendance-System.md) | Face recognition attendance with engagement detection               | 3-Advanced |
 | [Battleship Bot](./Projects/3-Advanced/Battleship-Bot.md)                     | Create a Discord bot that plays Battleship                          | 3-Advanced |
 | [Battleship Game Engine](./Projects/3-Advanced/Battleship-Game-Engine.md)     | Create a callable engine to play the Battleship game                | 3-Advanced |
 | [Boole Bots Game](./Projects/3-Advanced/Boole-Bot-Game.md)                    | Battling Bots driven by Boolean algebra                             | 3-Advanced |
@@ -135,6 +136,7 @@ required to complete them.
 | [Movie App](./Projects/3-Advanced/Movie-App.md)                               | Browse, Find Ratings, Check Actors and Find you next movie to watch | 3-Advanced |
 | [MyPodcast Library](./Projects/3-Advanced/MyPodcast-Library-app.md)           | Create a library of favorite podcasts                               | 3-Advanced |
 | [NASA Exoplanet Query](./Projects/3-Advanced/NASA-Exoplanet-Query.md)         | Query NASA's Exoplanet Archive                                      | 3-Advanced |
+| [Poker Night](./Projects/3-Advanced/Poker-Night.md)                           | Build a real-time multiplayer Texas Hold'em game engine             | 3-Advanced |
 | [Shell Game](./Projects/3-Advanced/Shell-Game.md)                             | Animated shell game                                                 | 3-Advanced |
 | [Shuffle Deck](./Projects/3-Advanced/Shuffle-Deck-App.md)                     | Evaluate different algorithms for shuffling a card deck             | 3-Advanced |
 | [Slack Archiver](./Projects/3-Advanced/Slack-Archiver.md)                     | Archive Slack Messages                                              | 3-Advanced |
